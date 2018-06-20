@@ -12,12 +12,12 @@
 		<key>TFDropDownMenu.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>3</integer>
 		</dict>
 		<key>TFDropDownMenuDemo.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>2</integer>
 		</dict>
 	</dict>
 </dict>

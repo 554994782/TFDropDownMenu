@@ -1,32 +1,24 @@
 PODS:
-  - SnapKit (4.0.0)
-  - TFSegment (1.0.0):
-    - SnapKit
-    - TFSegment/Custom (= 1.0.0)
-  - TFSegment/Custom (1.0.0):
-    - SnapKit
+  - TFDropDownMenu (1.0.0):
+    - TFDropDownMenu/Custom (= 1.0.0)
+  - TFDropDownMenu/Custom (1.0.0)
 
 DEPENDENCIES:
-  - TFSegment (from `https://github.com/554994782/TFSegment.git`, branch `develop`)
-
-SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
-    - SnapKit
+  - TFDropDownMenu (from `https://github.com/554994782/TFDropDownMenu.git`, branch `develop`)
 
 EXTERNAL SOURCES:
-  TFSegment:
+  TFDropDownMenu:
     :branch: develop
-    :git: https://github.com/554994782/TFSegment.git
+    :git: https://github.com/554994782/TFDropDownMenu.git
 
 CHECKOUT OPTIONS:
-  TFSegment:
-    :commit: 810afc46d3b091c6da0e73c0099d95f6743ac247
-    :git: https://github.com/554994782/TFSegment.git
+  TFDropDownMenu:
+    :commit: 593ff9060311006e38b01208243c0cf15e2992cd
+    :git: https://github.com/554994782/TFDropDownMenu.git
 
 SPEC CHECKSUMS:
-  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
-  TFSegment: 19b72298e9d5f34eb54f3c50970e4f34af7543e2
+  TFDropDownMenu: d6d4e8779559e02cd2fed093631e8aa8887a537c
 
-PODFILE CHECKSUM: 7a73c9195a06df052d19fa7f71c2defa277fb877
+PODFILE CHECKSUM: 628f8cdebd25f6d7e2fd4f22ee108961aeaff376
 
 COCOAPODS: 1.5.0
