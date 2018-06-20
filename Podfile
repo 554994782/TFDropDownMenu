@@ -12,7 +12,7 @@ inhibit_all_warnings!
 source 'https://github.com/Cocoapods/Specs.git'
 
 target 'TFDropDownMenuDemo' do
-    pod 'TFSegment', :git => 'https://github.com/554994782/TFSegment.git', :branch => ‘develop’
+    pod 'TFDropDownMenu', :git => 'https://github.com/554994782/TFDropDownMenu.git', :branch => ‘develop’
 end
 
 target 'TFDropDownMenu' do

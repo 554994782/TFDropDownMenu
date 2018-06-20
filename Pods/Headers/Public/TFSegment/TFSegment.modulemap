@@ -1,6 +1,0 @@
-module TFSegment [system] {
-  umbrella header "TFSegment-umbrella.h"
-
-  export *
-  module * { export * }
-}
