@@ -1,0 +1,6 @@
+module Pods_TFDropDownMenuDemo [system] {
+  umbrella header "Pods-TFDropDownMenuDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
