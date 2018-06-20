@@ -1,24 +1,18 @@
 PODS:
-  - TFDropDownMenu (1.0.0):
-    - TFDropDownMenu/Custom (= 1.0.0)
-  - TFDropDownMenu/Custom (1.0.0)
+  - TFDropDownMenu (1.0.1):
+    - TFDropDownMenu/Custom (= 1.0.1)
+  - TFDropDownMenu/Custom (1.0.1)
 
 DEPENDENCIES:
-  - TFDropDownMenu (from `https://github.com/554994782/TFDropDownMenu.git`, branch `develop`)
+  - TFDropDownMenu
 
-EXTERNAL SOURCES:
-  TFDropDownMenu:
-    :branch: develop
-    :git: https://github.com/554994782/TFDropDownMenu.git
-
-CHECKOUT OPTIONS:
-  TFDropDownMenu:
-    :commit: 593ff9060311006e38b01208243c0cf15e2992cd
-    :git: https://github.com/554994782/TFDropDownMenu.git
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - TFDropDownMenu
 
 SPEC CHECKSUMS:
-  TFDropDownMenu: d6d4e8779559e02cd2fed093631e8aa8887a537c
+  TFDropDownMenu: a7ce29c7392a201379ce1170e04d49679d27dd5a
 
-PODFILE CHECKSUM: 628f8cdebd25f6d7e2fd4f22ee108961aeaff376
+PODFILE CHECKSUM: de21447cbd4a652df035da4c7f927418e7c5e74c
 
 COCOAPODS: 1.5.0

@@ -7,39 +7,72 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A6AC52095FDF0C4EE241E6A4E2F7F5B /* Pods-TFDropDownMenuDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6B47275E245888C8D9C6E1137439B1 /* Pods-TFDropDownMenuDemo-dummy.m */; };
+		15C1067E1EC2392C9F8A418671E8139B /* TFLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CF43BB1C97F88A2E63618133C6F4EE /* TFLabel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		15CB253B160886C365025367F52EA1CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		16B0C45C36C0D4E66488C9D91EA0C26F /* TFDropDownMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 603B7E86D9A4886B79850C2D70C81B80 /* TFDropDownMenu-dummy.m */; };
+		1F3A6DB0CB083662327A8A6D7341CA39 /* TFDropDownMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = D62656C3BA3561EC2C62C20D603EF79F /* TFDropDownMenu.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		20AEA3EBA609226645AE481DD76242C4 /* TFDropDownMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF47855B163C9C99E78D684E5598F923 /* TFDropDownMenuView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4668F6CB719C2111E01A6872141848EE /* TFLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2812A75D2C9072B6691409A4A2CF0505 /* TFLabel.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		4BC7FE06FE8498B83821A1239A80B8A8 /* Pods-TFDropDownMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 365930F8C4953BD628E99600B6E713CD /* Pods-TFDropDownMenu-dummy.m */; };
+		69F0B46AE24D28619C84C022EC71C732 /* Pods-TFDropDownMenuDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6B47275E245888C8D9C6E1137439B1 /* Pods-TFDropDownMenuDemo-dummy.m */; };
 		772F816522A8189FD51A2C562F715AE4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		B24C57ED1DB472EA0204BC49FBA89DAD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		9EB1E39D3E84CF57FAA9F2B72C6F3354 /* TFDropDownMenuView.h in Headers */ = {isa = PBXBuildFile; fileRef = D40B2D0AC00CFF80A980C8C905A7C5DB /* TFDropDownMenuView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AB1762EF701A597C5950F6F6C0DA80FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1AEEC357502C2CA202368207DCEA80FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9EB77CB719D7AACEB38D265696CF4D43;
+			remoteInfo = TFDropDownMenu;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		04359B5DFAE5F1C0607FEB7E7516A5C6 /* Pods-TFDropDownMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TFDropDownMenu.release.xcconfig"; sourceTree = "<group>"; };
 		1953D086C7B9925796C10F6E59C3AA9D /* Pods-TFDropDownMenu-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TFDropDownMenu-acknowledgements.plist"; sourceTree = "<group>"; };
 		23FAF8F2D3654A3B293B78376014B0B6 /* Pods-TFDropDownMenuDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TFDropDownMenuDemo-frameworks.sh"; sourceTree = "<group>"; };
+		2812A75D2C9072B6691409A4A2CF0505 /* TFLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TFLabel.h; path = TFDropDownMenu/Custom/TFLabel.h; sourceTree = "<group>"; };
 		2D6B47275E245888C8D9C6E1137439B1 /* Pods-TFDropDownMenuDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TFDropDownMenuDemo-dummy.m"; sourceTree = "<group>"; };
+		30DC74B162E43CD2404C92A30CC61FAB /* TFDropDownMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TFDropDownMenu-prefix.pch"; sourceTree = "<group>"; };
 		311E57E01B5CAF0F9CE1243F5433630B /* Pods-TFDropDownMenuDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TFDropDownMenuDemo-resources.sh"; sourceTree = "<group>"; };
 		3345234CE3A809ADC8197159DC828163 /* Pods-TFDropDownMenuDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TFDropDownMenuDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		365930F8C4953BD628E99600B6E713CD /* Pods-TFDropDownMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TFDropDownMenu-dummy.m"; sourceTree = "<group>"; };
 		5D3BC7B80B153AB838ACDBBEDA490B3D /* Pods-TFDropDownMenuDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TFDropDownMenuDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		603B7E86D9A4886B79850C2D70C81B80 /* TFDropDownMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TFDropDownMenu-dummy.m"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		71BDBDC496682FAB4AAC5A65C3369307 /* TFDropDownMenu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TFDropDownMenu.h; path = TFDropDownMenu/TFDropDownMenu.h; sourceTree = "<group>"; };
+		749F193A1D3B64A1873FEBAA00739BF6 /* libPods-TFDropDownMenu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-TFDropDownMenu.a"; path = "libPods-TFDropDownMenu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81090E090CD2EDB2618058BC92FD6F5E /* libTFDropDownMenu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libTFDropDownMenu.a; path = libTFDropDownMenu.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8962BE26B64FD57058F95834338B63C2 /* Pods-TFDropDownMenuDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TFDropDownMenuDemo.release.xcconfig"; sourceTree = "<group>"; };
 		8C4924B2872B6748E1998C81E2F391F6 /* Pods-TFDropDownMenuDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TFDropDownMenuDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9B1DC64900161065703EE30719B23A22 /* Pods-TFDropDownMenu-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TFDropDownMenu-resources.sh"; sourceTree = "<group>"; };
-		BAD97271296CC66E595F6CE675CB40E4 /* libPods-TFDropDownMenuDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-TFDropDownMenuDemo.a"; path = "libPods-TFDropDownMenuDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2CF43BB1C97F88A2E63618133C6F4EE /* TFLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TFLabel.m; path = TFDropDownMenu/Custom/TFLabel.m; sourceTree = "<group>"; };
 		BF22F160BAE5EF67ABD588602AFBFB51 /* Pods-TFDropDownMenu-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TFDropDownMenu-acknowledgements.markdown"; sourceTree = "<group>"; };
-		C04E326CF0CAD17969943FD4888D4442 /* libPods-TFDropDownMenu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-TFDropDownMenu.a"; path = "libPods-TFDropDownMenu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF47855B163C9C99E78D684E5598F923 /* TFDropDownMenuView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TFDropDownMenuView.m; path = TFDropDownMenu/TFDropDownMenuView.m; sourceTree = "<group>"; };
+		C3EA41B3F68FC5D07760A9192191688A /* TFDropDownMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TFDropDownMenu.xcconfig; sourceTree = "<group>"; };
+		D40B2D0AC00CFF80A980C8C905A7C5DB /* TFDropDownMenuView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TFDropDownMenuView.h; path = TFDropDownMenu/TFDropDownMenuView.h; sourceTree = "<group>"; };
+		D62656C3BA3561EC2C62C20D603EF79F /* TFDropDownMenu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TFDropDownMenu.h; path = TFDropDownMenu/TFDropDownMenu.h; sourceTree = "<group>"; };
 		F427113EFD2E57926D9D3943E42B2C58 /* Pods-TFDropDownMenu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TFDropDownMenu.debug.xcconfig"; sourceTree = "<group>"; };
+		F6DCEC99C320659A9091839D23734801 /* libPods-TFDropDownMenuDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-TFDropDownMenuDemo.a"; path = "libPods-TFDropDownMenuDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8EF68922F00F8F3CBA6EC9ECB59E567A /* Frameworks */ = {
+		26F777CD2921A2B4D0ACBFDFC6CD9F59 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B24C57ED1DB472EA0204BC49FBA89DAD /* Foundation.framework in Frameworks */,
+				15CB253B160886C365025367F52EA1CF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A751261267FB422F245D5A34E07A1FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB1762EF701A597C5950F6F6C0DA80FD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,13 +87,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0488B6738FF015CFD65865EFBB20BE44 /* TFDropDownMenu */ = {
+		19EAD9581E6EB5FA5F9CDB3DBD2A7F4D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				71BDBDC496682FAB4AAC5A65C3369307 /* TFDropDownMenu.h */,
+				749F193A1D3B64A1873FEBAA00739BF6 /* libPods-TFDropDownMenu.a */,
+				F6DCEC99C320659A9091839D23734801 /* libPods-TFDropDownMenuDemo.a */,
+				81090E090CD2EDB2618058BC92FD6F5E /* libTFDropDownMenu.a */,
 			);
-			name = TFDropDownMenu;
-			path = TFDropDownMenu;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		1F56C180507B08A4D60FD3CC6F88B0D7 /* Pods-TFDropDownMenu */ = {
@@ -77,21 +111,11 @@
 			path = "Target Support Files/Pods-TFDropDownMenu";
 			sourceTree = "<group>";
 		};
-		2C72134176B2DD6D00052DD116D3F6B3 /* Products */ = {
+		257DB05A6B298758C3CEEECCD2ED5778 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
-				C04E326CF0CAD17969943FD4888D4442 /* libPods-TFDropDownMenu.a */,
-				BAD97271296CC66E595F6CE675CB40E4 /* libPods-TFDropDownMenuDemo.a */,
 			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		6F62915F361A979E6EADE99EEB775295 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				0488B6738FF015CFD65865EFBB20BE44 /* TFDropDownMenu */,
-			);
-			name = Pods;
+			name = Custom;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -99,10 +123,21 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				6F62915F361A979E6EADE99EEB775295 /* Pods */,
-				2C72134176B2DD6D00052DD116D3F6B3 /* Products */,
+				EF1DC986DD75F5DD3DE63D5E0973DBA5 /* Pods */,
+				19EAD9581E6EB5FA5F9CDB3DBD2A7F4D /* Products */,
 				A62B45F5306D57E56204544E17FD4C5E /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		A1E5752F03E9FA2862FA0B46D27D24A2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C3EA41B3F68FC5D07760A9192191688A /* TFDropDownMenu.xcconfig */,
+				603B7E86D9A4886B79850C2D70C81B80 /* TFDropDownMenu-dummy.m */,
+				30DC74B162E43CD2404C92A30CC61FAB /* TFDropDownMenu-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TFDropDownMenu";
 			sourceTree = "<group>";
 		};
 		A62B45F5306D57E56204544E17FD4C5E /* Targets Support Files */ = {
@@ -129,6 +164,21 @@
 			path = "Target Support Files/Pods-TFDropDownMenuDemo";
 			sourceTree = "<group>";
 		};
+		B2E0D122CE663335177E61355BEA5918 /* TFDropDownMenu */ = {
+			isa = PBXGroup;
+			children = (
+				D62656C3BA3561EC2C62C20D603EF79F /* TFDropDownMenu.h */,
+				D40B2D0AC00CFF80A980C8C905A7C5DB /* TFDropDownMenuView.h */,
+				BF47855B163C9C99E78D684E5598F923 /* TFDropDownMenuView.m */,
+				2812A75D2C9072B6691409A4A2CF0505 /* TFLabel.h */,
+				B2CF43BB1C97F88A2E63618133C6F4EE /* TFLabel.m */,
+				257DB05A6B298758C3CEEECCD2ED5778 /* Custom */,
+				A1E5752F03E9FA2862FA0B46D27D24A2 /* Support Files */,
+			);
+			name = TFDropDownMenu;
+			path = TFDropDownMenu;
+			sourceTree = "<group>";
+		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,9 +195,64 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		EF1DC986DD75F5DD3DE63D5E0973DBA5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B2E0D122CE663335177E61355BEA5918 /* TFDropDownMenu */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		71A0353D5C49C7D7BC023129B666153B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F3A6DB0CB083662327A8A6D7341CA39 /* TFDropDownMenu.h in Headers */,
+				9EB1E39D3E84CF57FAA9F2B72C6F3354 /* TFDropDownMenuView.h in Headers */,
+				4668F6CB719C2111E01A6872141848EE /* TFLabel.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		3708F03181ADEF1944E8C450AEC3BA4B /* Pods-TFDropDownMenuDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B658434AB10FB6BAAA6D7C3D926D6196 /* Build configuration list for PBXNativeTarget "Pods-TFDropDownMenuDemo" */;
+			buildPhases = (
+				0C16CE87E9DF966AF78039D527CDCC3F /* Sources */,
+				26F777CD2921A2B4D0ACBFDFC6CD9F59 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18680B9756A53E99F642791CB0ABF67E /* PBXTargetDependency */,
+			);
+			name = "Pods-TFDropDownMenuDemo";
+			productName = "Pods-TFDropDownMenuDemo";
+			productReference = F6DCEC99C320659A9091839D23734801 /* libPods-TFDropDownMenuDemo.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		9EB77CB719D7AACEB38D265696CF4D43 /* TFDropDownMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15C322A9185251C12A8D3922BEEC71E7 /* Build configuration list for PBXNativeTarget "TFDropDownMenu" */;
+			buildPhases = (
+				7D49D848B332C130777DE95565CE1592 /* Sources */,
+				2A751261267FB422F245D5A34E07A1FF /* Frameworks */,
+				71A0353D5C49C7D7BC023129B666153B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TFDropDownMenu;
+			productName = TFDropDownMenu;
+			productReference = 81090E090CD2EDB2618058BC92FD6F5E /* libTFDropDownMenu.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		AE2EC5B98A5F34AFB23228E41206A5DF /* Pods-TFDropDownMenu */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D19D15D9BEF33DDB244E3EE0098444AF /* Build configuration list for PBXNativeTarget "Pods-TFDropDownMenu" */;
@@ -161,23 +266,7 @@
 			);
 			name = "Pods-TFDropDownMenu";
 			productName = "Pods-TFDropDownMenu";
-			productReference = C04E326CF0CAD17969943FD4888D4442 /* libPods-TFDropDownMenu.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		DF989171B2DA248E3D4CF9B9C882A691 /* Pods-TFDropDownMenuDemo */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 16E8F1AA404BA4B482E7C61B2D7FFE2D /* Build configuration list for PBXNativeTarget "Pods-TFDropDownMenuDemo" */;
-			buildPhases = (
-				635DDC19F29445D5660F45CBCBA2C3CE /* Sources */,
-				8EF68922F00F8F3CBA6EC9ECB59E567A /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-TFDropDownMenuDemo";
-			productName = "Pods-TFDropDownMenuDemo";
-			productReference = BAD97271296CC66E595F6CE675CB40E4 /* libPods-TFDropDownMenuDemo.a */;
+			productReference = 749F193A1D3B64A1873FEBAA00739BF6 /* libPods-TFDropDownMenu.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -197,22 +286,33 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 2C72134176B2DD6D00052DD116D3F6B3 /* Products */;
+			productRefGroup = 19EAD9581E6EB5FA5F9CDB3DBD2A7F4D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				AE2EC5B98A5F34AFB23228E41206A5DF /* Pods-TFDropDownMenu */,
-				DF989171B2DA248E3D4CF9B9C882A691 /* Pods-TFDropDownMenuDemo */,
+				3708F03181ADEF1944E8C450AEC3BA4B /* Pods-TFDropDownMenuDemo */,
+				9EB77CB719D7AACEB38D265696CF4D43 /* TFDropDownMenu */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		635DDC19F29445D5660F45CBCBA2C3CE /* Sources */ = {
+		0C16CE87E9DF966AF78039D527CDCC3F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A6AC52095FDF0C4EE241E6A4E2F7F5B /* Pods-TFDropDownMenuDemo-dummy.m in Sources */,
+				69F0B46AE24D28619C84C022EC71C732 /* Pods-TFDropDownMenuDemo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D49D848B332C130777DE95565CE1592 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16B0C45C36C0D4E66488C9D91EA0C26F /* TFDropDownMenu-dummy.m in Sources */,
+				20AEA3EBA609226645AE481DD76242C4 /* TFDropDownMenuView.m in Sources */,
+				15C1067E1EC2392C9F8A418671E8139B /* TFLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +325,15 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		18680B9756A53E99F642791CB0ABF67E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TFDropDownMenu;
+			target = 9EB77CB719D7AACEB38D265696CF4D43 /* TFDropDownMenu */;
+			targetProxy = 1AEEC357502C2CA202368207DCEA80FD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1EE19F5DD95931924296F637BF18BD8F /* Debug */ = {
@@ -313,7 +422,7 @@
 			};
 			name = Release;
 		};
-		97E5406A4798FAC8F897BD695FF2D920 /* Release */ = {
+		53BDC0CE11761C7448D2CF1A813DD13E /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8962BE26B64FD57058F95834338B63C2 /* Pods-TFDropDownMenuDemo.release.xcconfig */;
 			buildSettings = {
@@ -330,6 +439,77 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7FFD4CE3187F4760A66A35E15707771C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3EA41B3F68FC5D07760A9192191688A /* TFDropDownMenu.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/TFDropDownMenu/TFDropDownMenu-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = TFDropDownMenu;
+				PRODUCT_NAME = TFDropDownMenu;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		81EE7D6D7A62F4B5A5733E75EF0CBED7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3345234CE3A809ADC8197159DC828163 /* Pods-TFDropDownMenuDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C71E82065A896EA2B54CE15AE3C514C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3EA41B3F68FC5D07760A9192191688A /* TFDropDownMenu.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/TFDropDownMenu/TFDropDownMenu-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = TFDropDownMenu;
+				PRODUCT_NAME = TFDropDownMenu;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -416,36 +596,14 @@
 			};
 			name = Release;
 		};
-		F55FF31545D3138E4FC7E115FC332495 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3345234CE3A809ADC8197159DC828163 /* Pods-TFDropDownMenuDemo.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		16E8F1AA404BA4B482E7C61B2D7FFE2D /* Build configuration list for PBXNativeTarget "Pods-TFDropDownMenuDemo" */ = {
+		15C322A9185251C12A8D3922BEEC71E7 /* Build configuration list for PBXNativeTarget "TFDropDownMenu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F55FF31545D3138E4FC7E115FC332495 /* Debug */,
-				97E5406A4798FAC8F897BD695FF2D920 /* Release */,
+				7FFD4CE3187F4760A66A35E15707771C /* Debug */,
+				C71E82065A896EA2B54CE15AE3C514C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -455,6 +613,15 @@
 			buildConfigurations = (
 				1EE19F5DD95931924296F637BF18BD8F /* Debug */,
 				F4568DEE257655D290C2B9CEAB37C934 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B658434AB10FB6BAAA6D7C3D926D6196 /* Build configuration list for PBXNativeTarget "Pods-TFDropDownMenuDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81EE7D6D7A62F4B5A5733E75EF0CBED7 /* Debug */,
+				53BDC0CE11761C7448D2CF1A813DD13E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
