@@ -24,5 +24,5 @@ ss.source_files = "TFDropDownMenu/Custom/*.{h,swift,c,m}"
 end
 
 s.public_header_files = "TFDropDownMenu/**/*.h"
-
+s.dependency 'Masonry'
 end

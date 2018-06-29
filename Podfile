@@ -13,8 +13,10 @@ source 'https://github.com/Cocoapods/Specs.git'
 
 target 'TFDropDownMenuDemo' do
     pod 'TFDropDownMenu'
+    pod 'Masonry'
 end
 
 target 'TFDropDownMenu' do
+    pod 'Masonry'
 end
 

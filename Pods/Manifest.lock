@@ -1,18 +1,22 @@
 PODS:
+  - Masonry (1.1.0)
   - TFDropDownMenu (1.0.1):
     - TFDropDownMenu/Custom (= 1.0.1)
   - TFDropDownMenu/Custom (1.0.1)
 
 DEPENDENCIES:
+  - Masonry
   - TFDropDownMenu
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - Masonry
     - TFDropDownMenu
 
 SPEC CHECKSUMS:
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   TFDropDownMenu: a7ce29c7392a201379ce1170e04d49679d27dd5a
 
-PODFILE CHECKSUM: de21447cbd4a652df035da4c7f927418e7c5e74c
+PODFILE CHECKSUM: 299da56365dc250bf32a1eba94db1ea1dd94aea6
 
 COCOAPODS: 1.5.0

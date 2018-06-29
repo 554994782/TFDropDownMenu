@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AE2EC5B98A5F34AFB23228E41206A5DF"
+               BlueprintIdentifier = "45E6219534E136A8A1DFFAA209F996B3"
                BlueprintName = "Pods-TFDropDownMenu"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libPods-TFDropDownMenu.a">
