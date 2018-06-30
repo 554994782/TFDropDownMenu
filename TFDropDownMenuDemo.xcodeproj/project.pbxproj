@@ -22,6 +22,8 @@
 		0170CF4920DA23C1004911A4 /* TFDropDownMenuView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0170CF4720DA23C1004911A4 /* TFDropDownMenuView.h */; };
 		0170CF4A20DA23C1004911A4 /* TFDropDownMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0170CF4820DA23C1004911A4 /* TFDropDownMenuView.m */; };
 		017C7B1720DDDFE100E37AE0 /* TFMenuDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = 017C7B1620DDDFE100E37AE0 /* TFMenuDefinition.h */; };
+		019BBE8820E77C1400ED36AB /* TFDropDownMenuCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 019BBE8620E77C1400ED36AB /* TFDropDownMenuCollectionViewCell.h */; };
+		019BBE8920E77C1400ED36AB /* TFDropDownMenuCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 019BBE8720E77C1400ED36AB /* TFDropDownMenuCollectionViewCell.m */; };
 		1B5C40E28577515C3CF33D0F /* libPods-TFDropDownMenuDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 61215EEE89BCE8B4B3A27F6E /* libPods-TFDropDownMenuDemo.a */; };
 		BEC7D6AF58653207CEBE101E /* libPods-TFDropDownMenu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0E8B0107CE4AFBB305AE82 /* libPods-TFDropDownMenu.a */; };
 /* End PBXBuildFile section */
@@ -70,6 +72,8 @@
 		0170CF4720DA23C1004911A4 /* TFDropDownMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFDropDownMenuView.h; sourceTree = "<group>"; };
 		0170CF4820DA23C1004911A4 /* TFDropDownMenuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFDropDownMenuView.m; sourceTree = "<group>"; };
 		017C7B1620DDDFE100E37AE0 /* TFMenuDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFMenuDefinition.h; sourceTree = "<group>"; };
+		019BBE8620E77C1400ED36AB /* TFDropDownMenuCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFDropDownMenuCollectionViewCell.h; sourceTree = "<group>"; };
+		019BBE8720E77C1400ED36AB /* TFDropDownMenuCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFDropDownMenuCollectionViewCell.m; sourceTree = "<group>"; };
 		15F14BBB6786C3D0C299DE9B /* Pods-TFDropDownMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFDropDownMenu.release.xcconfig"; path = "Pods/Target Support Files/Pods-TFDropDownMenu/Pods-TFDropDownMenu.release.xcconfig"; sourceTree = "<group>"; };
 		3BE5FC7B9FD5F04F6C1E3D77 /* Pods-TFDropDownMenu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFDropDownMenu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TFDropDownMenu/Pods-TFDropDownMenu.debug.xcconfig"; sourceTree = "<group>"; };
 		61215EEE89BCE8B4B3A27F6E /* libPods-TFDropDownMenuDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TFDropDownMenuDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,6 +158,8 @@
 				0150604320DBCF7200879357 /* TFIndexPatch.h */,
 				0150604420DBCF7200879357 /* TFIndexPatch.m */,
 				017C7B1620DDDFE100E37AE0 /* TFMenuDefinition.h */,
+				019BBE8620E77C1400ED36AB /* TFDropDownMenuCollectionViewCell.h */,
+				019BBE8720E77C1400ED36AB /* TFDropDownMenuCollectionViewCell.m */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -188,6 +194,7 @@
 				017C7B1720DDDFE100E37AE0 /* TFMenuDefinition.h in Headers */,
 				0170CF3D20D9F71D004911A4 /* TFDropDownMenu.h in Headers */,
 				0150604520DBCF7200879357 /* TFIndexPatch.h in Headers */,
+				019BBE8820E77C1400ED36AB /* TFDropDownMenuCollectionViewCell.h in Headers */,
 				0170CF4920DA23C1004911A4 /* TFDropDownMenuView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,6 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				019BBE8920E77C1400ED36AB /* TFDropDownMenuCollectionViewCell.m in Sources */,
 				0150604620DBCF7200879357 /* TFIndexPatch.m in Sources */,
 				0170CF4A20DA23C1004911A4 /* TFDropDownMenuView.m in Sources */,
 			);

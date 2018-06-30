@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "8.0"
   s.source       = { :git => "https://github.com/554994782/TFDropDownMenu.git", :tag => s.version }
 
-  s.source_files  = 'TFDropDownMenu/**/*.{h,m}'
+  s.source_files  = "TFDropDownMenu"
 
   s.subspec "Custom" do |ss|
     ss.source_files = "TFDropDownMenu/Custom/*.{h,swift,c,m}"

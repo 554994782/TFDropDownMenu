@@ -59,10 +59,11 @@
 - (instancetype)initWithFrame:(CGRect)frame firstArray:(NSMutableArray *)firstArray secondArray:(NSMutableArray *)secondArray {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor whiteColor];
-        self.firstArray = [NSMutableArray arrayWithArray:firstArray];
-        self.secondArray = [NSMutableArray arrayWithArray:secondArray];
         [self initAttributes];
+        self.backgroundColor = [UIColor whiteColor];
+        self.firstArray = firstArray;//[NSMutableArray arrayWithArray:firstArray];
+        self.secondArray = [NSMutableArray arrayWithArray:secondArray];
+        self.numberOfColumn = firstArray.count;
         [self addAllSubView];
         [self addAction];
     }
@@ -71,74 +72,75 @@
 }
 
 - (void)initAttributes {
-    _menuBackgroundColor = [UIColor whiteColor];
-    _itemTextSelectColor = [UIColor colorWithRed:246.0/255.0 green:79.0/255.0 blue:0.0/255.0 alpha:1.0];
-    _itemTextUnSelectColor = [UIColor colorWithRed:51.0/255.0 green:51.0/255.0 blue:51.0/255.0 alpha:1.0];
-    _cellTextSelectColor = [UIColor colorWithRed:246.0/255.0 green:79.0/255.0 blue:0.0/255.0 alpha:1.0];
-    _cellTextUnSelectColor = [UIColor colorWithRed:51.0/255.0 green:51.0/255.0 blue:51.0/255.0 alpha:1.0];
-    _separatorColor = [UIColor colorWithRed:219.0/255.0 green:219.0/255.0 blue:219.0/255.0 alpha:1.0];
-    _cellSelectBackgroundColor = [UIColor whiteColor];
-    _cellUnselectBackgroundColor = [UIColor whiteColor];
+    self.menuBackgroundColor = [UIColor whiteColor];
+    self.itemTextSelectColor = [UIColor colorWithRed:246.0/255.0 green:79.0/255.0 blue:0.0/255.0 alpha:1.0];
+    self.itemTextUnSelectColor = [UIColor colorWithRed:51.0/255.0 green:51.0/255.0 blue:51.0/255.0 alpha:1.0];
+    self.cellTextSelectColor = [UIColor colorWithRed:246.0/255.0 green:79.0/255.0 blue:0.0/255.0 alpha:1.0];
+    self.cellTextUnSelectColor = [UIColor colorWithRed:51.0/255.0 green:51.0/255.0 blue:51.0/255.0 alpha:1.0];
+    self.separatorColor = [UIColor colorWithRed:219.0/255.0 green:219.0/255.0 blue:219.0/255.0 alpha:1.0];
+    self.cellSelectBackgroundColor = [UIColor whiteColor];
+    self.cellUnselectBackgroundColor = [UIColor whiteColor];
     
-    _itemFontSize = 14.0;
-    _cellTitleFontSize = 14.0;
-    _cellDetailTitleFontSize = 11.0;
-    _tableViewHeight = 300.0;
-    _cellHeight = 44;
-    _ratioLeftToScreen = 0.5;
-    _kAnimationDuration = 0.25;
-    _textAlignment = TFDropDownTextAlignmentLeft;
-    _numberOfColumn = _firstArray.count;
+    self.itemFontSize = 14.0;
+    self.cellTitleFontSize = 14.0;
+    self.cellDetailTitleFontSize = 11.0;
+    self.tableViewHeight = 300.0;
+    self.cellHeight = 44;
+    self.ratioLeftToScreen = 0.5;
+    self.kAnimationDuration = 0.25;
+    self.textAlignment = TFDropDownTextAlignmentLeft;
     
-    _currentSelectSections = [NSMutableArray array];
-    _currentBgLayers = [NSMutableArray array];
-    _currentTitleLayers = [NSMutableArray array];
-    _currentSeparatorLayers = [NSMutableArray array];
-    _currentIndicatorLayers = [NSMutableArray array];
+    self.firstArray = [NSMutableArray array];
+    self.secondArray = [NSMutableArray array];
+    self.currentSelectSections = [NSMutableArray array];
+    self.currentBgLayers = [NSMutableArray array];
+    self.currentTitleLayers = [NSMutableArray array];
+    self.currentSeparatorLayers = [NSMutableArray array];
+    self.currentIndicatorLayers = [NSMutableArray array];
     
 }
 
 - (void)addAllSubView {
     CGFloat backgroundLayerWidth = self.frame.size.width / _numberOfColumn;
     
-    [_currentBgLayers removeAllObjects];
-    [_currentTitleLayers removeAllObjects];
-    [_currentSeparatorLayers removeAllObjects];
-    [_currentIndicatorLayers removeAllObjects];
+    [self.currentBgLayers removeAllObjects];
+    [self.currentTitleLayers removeAllObjects];
+    [self.currentSeparatorLayers removeAllObjects];
+    [self.currentIndicatorLayers removeAllObjects];
     
-    for (NSInteger i = 0; i < _numberOfColumn; i++) {
-        [_currentSelectSections addObject:[NSNumber numberWithInteger:0]];
+    for (NSInteger i = 0; i < self.numberOfColumn; i++) {
+        [self.currentSelectSections addObject:[NSNumber numberWithInteger:0]];
         
         // backgroundLayer
         CGPoint backgroundLayerPosition = CGPointMake((i + 0.5) * backgroundLayerWidth, self.bounds.size.height * 0.5);
-        CALayer *backgroundLayer = [self creatBackgroundLayer:backgroundLayerPosition backgroundColor:_menuBackgroundColor];
+        CALayer *backgroundLayer = [self creatBackgroundLayer:backgroundLayerPosition backgroundColor:self.menuBackgroundColor];
         
         [self.layer addSublayer:backgroundLayer];
-        [_currentBgLayers addObject:backgroundLayer];
+        [self.currentBgLayers addObject:backgroundLayer];
         
         // titleLayer
         NSString *titleStr = [self titleOfMenu:i];
         
         CGPoint titleLayerPosition = CGPointMake((i + 0.5) * backgroundLayerWidth, self.bounds.size.height * 0.5);
-        CATextLayer *titleLayer = [self creatTitleLayer:titleStr position:titleLayerPosition textColor:_itemTextUnSelectColor];
+        CATextLayer *titleLayer = [self creatTitleLayer:titleStr position:titleLayerPosition textColor:self.itemTextUnSelectColor];
         [self.layer addSublayer:titleLayer];
-        [_currentTitleLayers addObject:titleLayer];
+        [self.currentTitleLayers addObject:titleLayer];
         
         // indicatorLayer
         CGSize textSize = [self calculateStringSize:titleStr];// calculateStringSize(titleStr)
         CGPoint indicatorLayerPosition = CGPointMake(titleLayerPosition.x + (textSize.width / 2) + 10, self.bounds.size.height * 0.5 + 2);
         
-        CAShapeLayer *indicatorLayer = [self creatIndicatorLayer:indicatorLayerPosition color:_itemTextUnSelectColor];
+        CAShapeLayer *indicatorLayer = [self creatIndicatorLayer:indicatorLayerPosition color:self.itemTextUnSelectColor];
         [self.layer addSublayer:indicatorLayer];
-        [_currentIndicatorLayers addObject:indicatorLayer];
+        [self.currentIndicatorLayers addObject:indicatorLayer];
         
         // separatorLayer
-        if (i != _numberOfColumn - 1) {
+        if (i != self.numberOfColumn - 1) {
             CGPoint separatorLayerPosition = CGPointMake(ceil((i + 1) * backgroundLayerWidth) - 1, self.bounds.size.height * 0.5);
             
             CAShapeLayer *separatorLayer = [self creatSeparatorLayer:separatorLayerPosition color:_separatorColor];
             [self.layer addSublayer:separatorLayer];
-            [_currentSeparatorLayers addObject:separatorLayer];
+            [self.currentSeparatorLayers addObject:separatorLayer];
         }
     }
     [self addSubview:self.bottomLineView];
@@ -189,6 +191,33 @@
     return _rightTableView;
 }
 
+- (UICollectionView *)leftCollectionView {
+    if (!_leftCollectionView) {
+        UICollectionViewFlowLayout *collectionViewLayout = [[UICollectionViewFlowLayout alloc] init];
+        collectionViewLayout.itemSize = CGSizeMake((self.bounds.size.width-2)/2, _cellHeight);
+        collectionViewLayout.minimumInteritemSpacing = 0.5;
+        collectionViewLayout.minimumLineSpacing = 0.5;
+        
+        _leftCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width * _ratioLeftToScreen, 0) collectionViewLayout:collectionViewLayout];
+        _leftCollectionView.delegate = self;
+        _leftCollectionView.dataSource = self;
+        _leftCollectionView.backgroundColor = [UIColor colorWithWhite:0.99 alpha:1];
+        [_leftCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"UICollectionViewCell"];
+    }
+    return _leftCollectionView;
+}
+
+- (UICollectionView *)rightCollectionView {
+    if (!_rightCollectionView) {
+        UICollectionViewFlowLayout *collectionViewLayout = [[UICollectionViewFlowLayout alloc] init];
+        _rightCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(self.frame.origin.x + self.bounds.size.width * _ratioLeftToScreen, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width * (1 - _ratioLeftToScreen), 0) collectionViewLayout:collectionViewLayout];
+        _rightCollectionView.delegate = self;
+        _rightCollectionView.dataSource = self;
+        _rightCollectionView.backgroundColor = [UIColor colorWithWhite:0.99 alpha:1];
+        [_rightCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"UICollectionViewCell"];
+    }
+    return _rightCollectionView;
+}
 
 /// 背景layer
 - (CALayer *)creatBackgroundLayer:(CGPoint)position backgroundColor:(UIColor *)backgroundColor {
@@ -226,7 +255,7 @@
     [bezierPath moveToPoint:CGPointMake(5, 5)];
     [bezierPath addLineToPoint:CGPointMake(10, 0)];
     [bezierPath closePath];
-
+    
     // shapeLayer
     CAShapeLayer *shapeLayer = [[CAShapeLayer alloc] init];
     shapeLayer.path = bezierPath.CGPath;
@@ -241,9 +270,9 @@
     // path
     UIBezierPath *bezierPath = [[UIBezierPath alloc] init];
     [bezierPath moveToPoint:CGPointMake(0, 0)];
-    [bezierPath addLineToPoint:CGPointMake(5, self.bounds.size.height - 16)];
+    [bezierPath addLineToPoint:CGPointMake(0, self.bounds.size.height - 16)];
     [bezierPath closePath];
-
+    
     // separatorLayer
     CAShapeLayer *separatorLayer = [[CAShapeLayer alloc] init];
     separatorLayer.path = bezierPath.CGPath;
@@ -390,8 +419,14 @@
     NSString *cellID = @"cellID";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellID];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
         cell.textLabel.textColor = _cellTextUnSelectColor;
+        if (self.textAlignment == TFDropDownTextAlignmentCenter) {
+            cell.textLabel.textAlignment = NSTextAlignmentCenter;
+        } else {
+            cell.textLabel.textAlignment = NSTextAlignmentLeft;
+        }
+        
         cell.textLabel.highlightedTextColor = _cellTextSelectColor;
         cell.textLabel.font = [UIFont systemFontOfSize:_cellTitleFontSize];
         cell.detailTextLabel.textColor = _cellTextUnSelectColor;
@@ -440,7 +475,7 @@
         } else {
             cell.imageView.image = nil;
         }
-
+        
         // 选中上次选择的行
         CATextLayer *titlelayer = _currentTitleLayers[_currentSelectColumn];
         
@@ -498,6 +533,32 @@
         }
     }
     
+    
+}
+// MARK: - UICollectionViewDataSource, UICollectionViewDelegate
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    if (collectionView == _leftCollectionView) {
+        return [self numberOfSectionsInColumn:_currentSelectColumn];
+    }else {
+        NSInteger section = [NSString stringWithFormat:@"%@", _currentSelectSections[_currentSelectColumn]].integerValue;
+        return [self numberOfRowsInColumn:_currentSelectColumn section:section];
+    }
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *collectionCell = @"collectionCell";
+    UICollectionViewCell *cell = [_leftCollectionView dequeueReusableCellWithReuseIdentifier:@"UICollectionViewCell" forIndexPath:indexPath];
+    return cell;
+    
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
+
+-(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
+    
+    return UIEdgeInsetsMake(0.5, 0.5, 0.5, 0.5);
     
 }
 
@@ -588,10 +649,10 @@
         if ([self numberOfRowsInColumn:i section:0] > 0) {
             TFIndexPatch *index = [[TFIndexPatch alloc] initWithColumn:i section:0 row:0];
             [self selectedAtIndex:index];
-         } else {
-             TFIndexPatch *index = [[TFIndexPatch alloc] initWithColumn:i section:0 row:-1];
-             [self selectedAtIndex:index];
-         }
+        } else {
+            TFIndexPatch *index = [[TFIndexPatch alloc] initWithColumn:i section:0 row:-1];
+            [self selectedAtIndex:index];
+        }
     }
 }
 
@@ -631,7 +692,7 @@
 - (void)animateForBackgroundView:(BOOL)show complete:(void(^)(void))complete {
     
     if (show) {
-        [self.superview addSubview:_backgroundView];
+        [self.superview addSubview:self.backgroundView];
         [self.superview addSubview:self];
         [UIView animateWithDuration:_kAnimationDuration animations:^{
             self.backgroundView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.3];
@@ -665,18 +726,18 @@
     
     if (show) {
         if (haveItems) {
-            _leftTableView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width * _ratioLeftToScreen, 0);
-            _rightTableView.frame = CGRectMake(self.frame.origin.x + self.bounds.size.width * _ratioLeftToScreen, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width * (1 - _ratioLeftToScreen), 0);
-            [self.superview addSubview:_leftTableView];
-            [self.superview addSubview:_rightTableView];
+            self.leftTableView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width * _ratioLeftToScreen, 0);
+            self.rightTableView.frame = CGRectMake(self.frame.origin.x + self.bounds.size.width * _ratioLeftToScreen, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width * (1 - _ratioLeftToScreen), 0);
+            [self.superview addSubview:self.leftTableView];
+            [self.superview addSubview:self.rightTableView];
             [UIView animateWithDuration:_kAnimationDuration animations:^{
                 self.leftTableView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width * self.ratioLeftToScreen, heightForTableView);
                 self.rightTableView.frame = CGRectMake(self.frame.origin.x + self.bounds.size.width * self.ratioLeftToScreen, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width * (1 - self.ratioLeftToScreen), heightForTableView);
             }];
         } else {
-            [_rightTableView removeFromSuperview];
-            _leftTableView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width, 0);
-            [self.superview addSubview:_leftTableView];
+            [self.rightTableView removeFromSuperview];
+            self.leftTableView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width, 0);
+            [self.superview addSubview:self.leftTableView];
             [UIView animateWithDuration:_kAnimationDuration animations:^{
                 self.leftTableView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width, heightForTableView);
             }];
@@ -726,4 +787,34 @@
     }
 }
 
+/**设置属性*/
+- (void)setMenuBackgroundColor:(UIColor *)menuBackgroundColor {
+    _menuBackgroundColor = menuBackgroundColor;
+    for (CALayer *backLayer in self.currentBgLayers) {
+        backLayer.backgroundColor = [_menuBackgroundColor CGColor];
+        self.backgroundColor = _menuBackgroundColor;
+    }
+}
+- (void)setItemTextUnSelectColor:(UIColor *)itemTextUnSelectColor {
+    _itemTextUnSelectColor = itemTextUnSelectColor;
+    for (CATextLayer *titleLayer in self.currentTitleLayers) {
+        titleLayer.foregroundColor = [_itemTextUnSelectColor CGColor];
+    }
+    for (CAShapeLayer *indicatorLayer in self.currentIndicatorLayers) {
+        indicatorLayer.strokeColor = [_itemTextUnSelectColor CGColor];
+    }
+}
+- (void)setSeparatorColor:(UIColor *)separatorColor {
+    _separatorColor = separatorColor;
+    for (CAShapeLayer *separatorLayer in self.currentSeparatorLayers) {
+        separatorLayer.strokeColor = [_separatorColor CGColor];
+    }
+}
+
+- (void)setItemFontSize:(CGFloat)itemFontSize {
+    _itemFontSize = itemFontSize;
+    for (CATextLayer *titleLayer in self.currentTitleLayers) {
+        titleLayer.fontSize = _itemFontSize;
+    }
+}
 @end
