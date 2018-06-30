@@ -15,7 +15,7 @@
 #define NAVBAR_HEIGHT (STATUSBAR_HEIGHT+44)
 #define SCREEN_SCALE [UIScreen mainScreen].scale
 
-@interface TFDropDownMenuView()
+@interface TFDropDownMenuView()<UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource>
 
 //MARK: 数据源
 /**一级菜单title数组*/
@@ -371,6 +371,130 @@
         }
     }
     return @"";
+}
+
+// MARK: - UITableViewDataSource, UITableViewDelegate
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (tableView == _leftTableView) {
+        return [self numberOfSectionsInColumn:_currentSelectColumn];
+    }else {
+        NSInteger section = [NSString stringWithFormat:@"%@", _currentSelectSections[_currentSelectColumn]].integerValue;
+        return [self numberOfRowsInColumn:_currentSelectColumn section:section];
+    }
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *cellID = @"cellID";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellID];
+        cell.textLabel.textColor = _cellTextUnSelectColor;
+        cell.textLabel.highlightedTextColor = _cellTextSelectColor;
+        cell.textLabel.font = [UIFont systemFontOfSize:_cellTitleFontSize];
+        cell.detailTextLabel.textColor = _cellTextUnSelectColor;
+        cell.detailTextLabel.highlightedTextColor = _cellTextSelectColor;
+        cell.detailTextLabel.font = [UIFont systemFontOfSize:_cellDetailTitleFontSize];
+        cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
+        cell.selectedBackgroundView = [[UIView alloc] initWithFrame:cell.bounds];
+        cell.selectedBackgroundView.backgroundColor = _cellSelectBackgroundColor;
+    }
+    
+    if (tableView == _leftTableView) {
+        // 一级列表
+        cell.textLabel.text = [self titleForColumn:_currentSelectColumn section:indexPath.row];
+        cell.detailTextLabel.text = [self detailTextForColumn:_currentSelectColumn section:indexPath.row];
+        // image
+        NSString *imagename = [self imageNameForColumn:_currentSelectColumn section:indexPath.row];
+        if (imagename) {
+            cell.imageView.image = [UIImage imageNamed:imagename];
+        } else {
+            cell.imageView.image = nil;
+        }
+        
+        // 选中上次选择的行
+        NSInteger select = [NSString stringWithFormat:@"%@", _currentSelectSections[_currentSelectColumn]].integerValue;
+        if (select == indexPath.row) {
+            [tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionNone];
+            
+        }
+        if ([self numberOfRowsInColumn:_currentSelectColumn section:indexPath.row] > 0) {
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        } else {
+            cell.accessoryType = UITableViewCellAccessoryNone;
+        }
+        
+    } else {
+        // 二级列表
+        NSInteger currentSelectedSection = [NSString stringWithFormat:@"%@", _currentSelectSections[_currentSelectColumn]].integerValue;
+        
+        cell.textLabel.text = [self titleForColumn:_currentSelectColumn section:currentSelectedSection row:indexPath.row];
+        cell.detailTextLabel.text = [self detailTextForColumn:_currentSelectColumn section:currentSelectedSection row:indexPath.row];
+        
+        // image
+        NSString *imagename = [self imageNameForColumn:_currentSelectColumn section:currentSelectedSection row:indexPath.row];
+        if (imagename) {
+            cell.imageView.image = [UIImage imageNamed:imagename];
+        } else {
+            cell.imageView.image = nil;
+        }
+
+        // 选中上次选择的行
+        CATextLayer *titlelayer = _currentTitleLayers[_currentSelectColumn];
+        
+        if ([cell.textLabel.text isEqualToString:[NSString stringWithFormat:@"%@", titlelayer.string]] && _lastSelectSection == currentSelectedSection) {
+            [tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
+        }
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    return cell;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (_delegate) {
+        CATextLayer *titleLayer = _currentTitleLayers[_currentSelectColumn];
+        
+        if (tableView == _leftTableView) {
+            // 一级列表
+            
+            _currentSelectSections[_currentSelectColumn] = [NSNumber numberWithInteger:indexPath.row];
+            BOOL haveItems = ([self numberOfRowsInColumn:_currentSelectColumn section:indexPath.row] > 0);
+            [self animateForTitleLayer:titleLayer indicator:_currentIndicatorLayers[_currentSelectColumn] show:YES complete:^{
+            }];
+            
+            if (haveItems) {
+                [_rightTableView reloadData];
+            }else {
+                // 收回列表
+                titleLayer.string = [self titleForColumn:_currentSelectColumn section:indexPath.row];
+                _lastSelectSection = [NSString stringWithFormat:@"%@", _currentSelectSections[_currentSelectColumn]].integerValue;
+                [self animateForIndicator:_currentIndicatorLayers[_currentSelectColumn] titlelayer:titleLayer show:NO complete:^{
+                    self.isShow = NO;
+                }];
+                if ([self.delegate respondsToSelector:@selector(menuView:selectIndex:)]) {
+                    TFIndexPatch *index = [[TFIndexPatch alloc] initWithColumn:_currentSelectColumn section:indexPath.row row:-1];
+                    [self.delegate menuView:self selectIndex:index];
+                }
+            }
+            
+            
+            
+        }else {
+            // 二级列表
+            _lastSelectSection = [NSString stringWithFormat:@"%@", _currentSelectSections[_currentSelectColumn]].integerValue;
+            
+            titleLayer.string = [self titleForColumn:_currentSelectColumn section:_lastSelectSection row:indexPath.row];
+            
+            [self animateForIndicator:_currentIndicatorLayers[_currentSelectColumn] titlelayer:titleLayer show:NO complete:^{
+                self.isShow = NO;
+            }];
+            
+            if ([self.delegate respondsToSelector:@selector(menuView:selectIndex:)]) {
+                TFIndexPatch *index = [[TFIndexPatch alloc] initWithColumn:_currentSelectColumn section:_lastSelectSection row:indexPath.row];
+                [self.delegate menuView:self selectIndex:index];
+            }
+        }
+    }
+    
+    
 }
 
 //MARK: 事件Action
