@@ -19,9 +19,9 @@ Pod::Spec.new do |s|
 
   s.source_files  = "TFDropDownMenu/**/*.{h,m}"
 
-  s.subspec "Custom" do |ss|
-    ss.source_files = "TFDropDownMenu/Custom/*.{h,swift,c,m}"
-  end
+# s.subspec "Custom" do |ss|
+#    ss.source_files = "TFDropDownMenu/Custom/*.{h,swift,c,m}"
+#  end
 
   s.public_header_files = "TFDropDownMenu/**/*.h"
   s.dependency 'Masonry'
