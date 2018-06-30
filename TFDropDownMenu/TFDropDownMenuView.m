@@ -60,9 +60,9 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor whiteColor];
-        [self initAttributes];
         self.firstArray = [NSMutableArray arrayWithArray:firstArray];
         self.secondArray = [NSMutableArray arrayWithArray:secondArray];
+        [self initAttributes];
         [self addAllSubView];
         [self addAction];
     }
@@ -90,6 +90,11 @@
     _textAlignment = TFDropDownTextAlignmentLeft;
     _numberOfColumn = _firstArray.count;
     
+    _currentSelectSections = [NSMutableArray array];
+    _currentBgLayers = [NSMutableArray array];
+    _currentTitleLayers = [NSMutableArray array];
+    _currentSeparatorLayers = [NSMutableArray array];
+    _currentIndicatorLayers = [NSMutableArray array];
     
 }
 
@@ -101,7 +106,6 @@
     [_currentSeparatorLayers removeAllObjects];
     [_currentIndicatorLayers removeAllObjects];
     
-    _currentSelectSections = [NSMutableArray array];
     for (NSInteger i = 0; i < _numberOfColumn; i++) {
         [_currentSelectSections addObject:[NSNumber numberWithInteger:0]];
         
