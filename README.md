@@ -5,7 +5,6 @@
 * Getting Started
     * [Features【Support Swift Verson】](#Support_Verson)
     * [Installation【How to use TFDropDownMenu】](#How_to_use_TFDropDownMenu)
-    * [Structure【The Structure Chart of TFDropDownMenu】](#The_Structure_Chart_of_TFDropDownMenu)
 * Comment API
     ```
     TFDropDownMenuView.h
