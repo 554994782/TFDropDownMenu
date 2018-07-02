@@ -40,16 +40,18 @@
     NSMutableArray *data2 = [NSMutableArray arrayWithObjects:@[], array21, @[], @[], nil];
     TFDropDownMenuView *menu = [[TFDropDownMenuView alloc] initWithFrame:CGRectMake(0, NAVBAR_HEIGHT, UIScreen.mainScreen.bounds.size.width, 40) firstArray:data1 secondArray:data2];
     menu.delegate = self;
-    menu.itemTextUnSelectColor = [UIColor blueColor];
-    menu.itemTextSelectColor = [UIColor orangeColor];
-    menu.cellTextSelectColor = [UIColor purpleColor];
-    menu.cellTextUnSelectColor = [UIColor greenColor];
+//    menu.itemTextUnSelectColor = [UIColor blueColor];
+//    menu.itemTextSelectColor = [UIColor orangeColor];
+//    menu.cellTextSelectColor = [UIColor purpleColor];
+//    menu.cellTextUnSelectColor = [UIColor greenColor];
     menu.ratioLeftToScreen = 0.35;
+    [self.view addSubview:menu];
     
-    NSMutableArray *detail1 = [NSMutableArray arrayWithObjects:@"11", @"12", @"13", @"14", @"15", @"16", @"17", @"18", nil];
-    NSMutableArray *detail2 = [NSMutableArray arrayWithObjects:@"21", @"22", @"23", @"24", nil];
+    /*副标*/
+    NSMutableArray *detail1 = [NSMutableArray arrayWithObjects:@"21", @"22", @"23", @"24", nil];
+    NSMutableArray *detail2 = [NSMutableArray arrayWithObjects:@"11", @"12", @"13", @"14", @"15", @"16", @"17", @"18", nil];
     NSMutableArray *detail3 = [NSMutableArray arrayWithObjects:@"31", @"32", @"33", @"34", @"35", @"36", @"37", @"38", nil];
-    NSArray *detail11 = @[
+    NSArray *detail21 = @[
                          @[@"111", @"112", @"113", @"114", @"115"],
                          @[@"121",@"122", @"123", @"125", @"125"],
                          @[@"131", @"132", @"133", @"134", @"135", @"136"],
@@ -60,9 +62,12 @@
                          @[@"181", @"182", @"183", @"184", @"185"]
                          ];
     menu.firstRightArray = [NSMutableArray arrayWithObjects:detail1, detail2, detail3, nil];
-    menu.secondRightArray = [NSMutableArray arrayWithObjects:detail11, nil];
+    menu.secondRightArray = [NSMutableArray arrayWithObjects:@[], detail21, nil];
+    
+    /*风格*/
     menu.menuStyleArray = [NSMutableArray arrayWithObjects:[NSNumber numberWithInteger:TFDropDownMenuStyleTableView], [NSNumber numberWithInteger:TFDropDownMenuStyleTableView], [NSNumber numberWithInteger:TFDropDownMenuStyleCollectionView], [NSNumber numberWithInteger:TFDropDownMenuStyleCustom], nil];
     
+    /*自定义视图*/
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 0, 300)];
     label.text = @"我是自定义视图\n我是自定义视图\n我是自定义视图\n我是自定义视图\n我是自定义视图\n我是自定义视图\n我是自定义视图\n我是自定义视图";
     label.numberOfLines = 0;
@@ -71,7 +76,6 @@
     label.textColor = [UIColor orangeColor];
     menu.customViews = [NSMutableArray arrayWithObjects:[NSNull null], [NSNull null], [NSNull null], label, nil];
     
-    [self.view addSubview:menu];
     
     // Do any additional setup after loading the view, typically from a nib.
 }

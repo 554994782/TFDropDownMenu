@@ -505,7 +505,7 @@
                 if (_currentSelectColumn < _menuStyleArray.count) {
                     style = [NSString stringWithFormat:@"%@", _menuStyleArray[_currentSelectColumn]].integerValue;
                 }
-
+                
                 switch (style) {
                     case TFDropDownMenuStyleTableView: {
                         [_rightTableView reloadData];
@@ -604,7 +604,7 @@
             }];
             
             if (haveItems) {
-//                [_rightCollectionView reloadData];
+                //                [_rightCollectionView reloadData];
             }else {
                 // 收回列表
                 titleLayer.string = [self titleForColumn:_currentSelectColumn section:indexPath.row];
@@ -844,7 +844,7 @@
                 [self.rightTableView removeFromSuperview];
                 [self.customScrollView removeFromSuperview];
                 [self.superview addSubview:self.leftCollectionView];
-//                [self.leftCollectionView reloadData];
+                //                [self.leftCollectionView reloadData];
                 self.leftCollectionView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width, 0);
                 
                 [UIView animateWithDuration:_kAnimationDuration animations:^{
@@ -1036,7 +1036,7 @@
         switch (style) {
             case TFDropDownMenuStyleTableView: {
                 [UIView animateWithDuration:_kAnimationDuration animations:^{
-                    self.leftTableView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width * self.ratioLeftToScreen, 0);
+                    self.leftTableView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width, 0);
                 } completion:^(BOOL finished) {
                     [self.leftTableView removeFromSuperview];
                 }];

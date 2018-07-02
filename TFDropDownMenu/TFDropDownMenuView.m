@@ -1036,7 +1036,7 @@
         switch (style) {
             case TFDropDownMenuStyleTableView: {
                 [UIView animateWithDuration:_kAnimationDuration animations:^{
-                    self.leftTableView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width * self.ratioLeftToScreen, 0);
+                    self.leftTableView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width, 0);
                 } completion:^(BOOL finished) {
                     [self.leftTableView removeFromSuperview];
                 }];

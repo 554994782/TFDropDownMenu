@@ -15,14 +15,8 @@
 /**下拉菜单风格*/
 typedef NS_ENUM(NSUInteger, TFDropDownMenuStyle) {
     TFDropDownMenuStyleTableView,//普通tableview，一行一个，可支持二级菜单
-    TFDropDownMenuStyleCollectionView,//collectionView，仅支持一级菜单生效
+    TFDropDownMenuStyleCollectionView,//collectionView，仅支持一级菜单
     TFDropDownMenuStyleCustom//自定义视图，需设置，仅支持一级菜单
-};
-
-/**下拉表单文字位置*/
-typedef NS_ENUM(NSUInteger, TFDropDownTextAlignment) {
-    TFDropDownTextAlignmentLeft,//下拉表单文字靠左
-    TFDropDownTextAlignmentCenter,//下拉表单文字居中
 };
 
 //代理点击回调
