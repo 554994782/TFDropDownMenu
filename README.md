@@ -142,12 +142,3 @@ menu.customViews = [NSMutableArray arrayWithObjects:[NSNull null], [NSNull null]
 * If you find bug when used，Hope you can Issues me，Thank you or try to download the latest code of this framework to see the BUG has been fixed or not）
 * If you find the function is not enough when used，Hope you can Issues me，I very much to add more useful function to this framework ，Thank you !
 * If you want to contribute code for TFDropDownMenut，please Pull Requests me
-*  If you use TFDropDownMenut in your develop app，Hope you can go to [CocoaControls](https://www.cocoacontrols.com/controls/TFDropDownMenu) to add the iTunes path of you app，I Will install your app，and according to the usage of many app，to be a better design and improve to TFDropDownMenut，Thank you !
-* Step01（WeChat is just an Example，Explore“Your app name itunes”）
-![(step01)](https://github.com/554994782/TFDropDownMenut/blob/master/Images/hope01.jpg)
-* Step02
-![(step02)](https://github.com/554994782/TFDropDownMenut/blob/master/Images/hope02.jpg)
-* Step03
-![(step03)](https://github.com/554994782/TFDropDownMenut/blob/master/Images/hope03.jpg)
-* Step04
-![(step04)](https://github.com/554994782/TFDropDownMenut/blob/master/Images/hope04.jpg)
