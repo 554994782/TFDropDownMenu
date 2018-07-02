@@ -41,6 +41,7 @@
     NSMutableArray *data2 = [NSMutableArray arrayWithObjects:@[], array21, @[], @[], nil];
     TFDropDownMenuView *menu = [[TFDropDownMenuView alloc] initWithFrame:CGRectMake(0, NAVBAR_HEIGHT, UIScreen.mainScreen.bounds.size.width, 40) firstArray:data1 secondArray:data2];
     menu.delegate = self;
+    menu.cellSelectBackgroundColor = [UIColor colorWithWhite:0.9 alpha:1];
 //    menu.itemTextUnSelectColor = [UIColor blueColor];
 //    menu.itemTextSelectColor = [UIColor orangeColor];
 //    menu.cellTextSelectColor = [UIColor purpleColor];
