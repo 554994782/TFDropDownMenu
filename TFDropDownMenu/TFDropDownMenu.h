@@ -18,4 +18,4 @@ FOUNDATION_EXPORT const unsigned char TFDropDownMenuVersionString[];
 #import "TFIndexPatch.h"
 #import "TFDropDownMenuView.h"
 #import "TFDropDownMenuCollectionViewCell.h"
-
+#import "TFMenuDefinition.h"

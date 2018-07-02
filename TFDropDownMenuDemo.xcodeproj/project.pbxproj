@@ -22,6 +22,7 @@
 		0170CF4920DA23C1004911A4 /* TFDropDownMenuView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0170CF4720DA23C1004911A4 /* TFDropDownMenuView.h */; };
 		0170CF4A20DA23C1004911A4 /* TFDropDownMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0170CF4820DA23C1004911A4 /* TFDropDownMenuView.m */; };
 		017C7B1720DDDFE100E37AE0 /* TFMenuDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = 017C7B1620DDDFE100E37AE0 /* TFMenuDefinition.h */; };
+		018C7B7F20EA328D006A9999 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 018C7B7E20EA328D006A9999 /* README.md */; };
 		019BBE8820E77C1400ED36AB /* TFDropDownMenuCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 019BBE8620E77C1400ED36AB /* TFDropDownMenuCollectionViewCell.h */; };
 		019BBE8920E77C1400ED36AB /* TFDropDownMenuCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 019BBE8720E77C1400ED36AB /* TFDropDownMenuCollectionViewCell.m */; };
 		1B5C40E28577515C3CF33D0F /* libPods-TFDropDownMenuDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 61215EEE89BCE8B4B3A27F6E /* libPods-TFDropDownMenuDemo.a */; };
@@ -72,6 +73,7 @@
 		0170CF4720DA23C1004911A4 /* TFDropDownMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFDropDownMenuView.h; sourceTree = "<group>"; };
 		0170CF4820DA23C1004911A4 /* TFDropDownMenuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFDropDownMenuView.m; sourceTree = "<group>"; };
 		017C7B1620DDDFE100E37AE0 /* TFMenuDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFMenuDefinition.h; sourceTree = "<group>"; };
+		018C7B7E20EA328D006A9999 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		019BBE8620E77C1400ED36AB /* TFDropDownMenuCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFDropDownMenuCollectionViewCell.h; sourceTree = "<group>"; };
 		019BBE8720E77C1400ED36AB /* TFDropDownMenuCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFDropDownMenuCollectionViewCell.m; sourceTree = "<group>"; };
 		15F14BBB6786C3D0C299DE9B /* Pods-TFDropDownMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFDropDownMenu.release.xcconfig"; path = "Pods/Target Support Files/Pods-TFDropDownMenu/Pods-TFDropDownMenu.release.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 		0170CF1B20D9E84F004911A4 /* TFDropDownMenuDemo */ = {
 			isa = PBXGroup;
 			children = (
+				018C7B7E20EA328D006A9999 /* README.md */,
 				0170CF1C20D9E84F004911A4 /* AppDelegate.h */,
 				0170CF1D20D9E84F004911A4 /* AppDelegate.m */,
 				0170CF1F20D9E84F004911A4 /* ViewController.h */,
@@ -284,6 +287,7 @@
 			files = (
 				0170CF2920D9E851004911A4 /* LaunchScreen.storyboard in Resources */,
 				0170CF2620D9E851004911A4 /* Assets.xcassets in Resources */,
+				018C7B7F20EA328D006A9999 /* README.md in Resources */,
 				0170CF3320D9F6EE004911A4 /* TFDropDownMenu.podspec in Resources */,
 				0170CF2420D9E84F004911A4 /* Main.storyboard in Resources */,
 			);
