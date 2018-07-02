@@ -16,7 +16,6 @@
 typedef NS_ENUM(NSUInteger, TFDropDownMenuStyle) {
     TFDropDownMenuStyleTableView,//普通tableview，一行一个，可支持二级菜单
     TFDropDownMenuStyleCollectionView,//collectionView，仅支持一级菜单生效
-    TFDropDownMenuStyleTableCollectionView,//左侧tableview右侧collectionView，仅存在二级菜单时生效
     TFDropDownMenuStyleCustom//自定义视图，需设置，仅支持一级菜单
 };
 

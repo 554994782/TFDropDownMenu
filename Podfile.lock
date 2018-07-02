@@ -1,9 +1,6 @@
 PODS:
   - Masonry (1.1.0)
-  - TFDropDownMenu (1.0.3):
-    - Masonry
-    - TFDropDownMenu/Custom (= 1.0.3)
-  - TFDropDownMenu/Custom (1.0.3):
+  - TFDropDownMenu (1.0.4):
     - Masonry
 
 DEPENDENCIES:
@@ -17,7 +14,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  TFDropDownMenu: ce866cfc4dfe56d11678be9e19d10e1cfe6f7d53
+  TFDropDownMenu: 84ee8023703bb0bfb922ff583c5aefb7fbe39018
 
 PODFILE CHECKSUM: 299da56365dc250bf32a1eba94db1ea1dd94aea6
 

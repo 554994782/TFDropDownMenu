@@ -15,7 +15,7 @@
 
 /**
  菜单初始化方法
-
+ 
  @param frame frame
  @param firstArray 一级菜单
  @param secondArray 二级菜单
@@ -70,8 +70,6 @@
 @property (assign, nonatomic) CGFloat cellHeight;
 /**左侧表单宽度占屏比 范围0.0~1.0, 默认0.5*/
 @property (assign, nonatomic) CGFloat ratioLeftToScreen;//有二级菜单时调整左右所占比例
-/**下拉表单文字位置, 默认TFDropDownTextAlignmentLeft*/
-@property (assign, nonatomic) TFDropDownTextAlignment textAlignment;
 /**自定义下拉视图*/
 @property (strong, nonatomic) NSMutableArray *customViews;
 /**动画时间, 默认0.25*/

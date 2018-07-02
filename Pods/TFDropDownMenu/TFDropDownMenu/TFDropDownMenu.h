@@ -17,3 +17,5 @@ FOUNDATION_EXPORT const unsigned char TFDropDownMenuVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <TFDropDownMenu/PublicHeader.h>
 #import "TFIndexPatch.h"
 #import "TFDropDownMenuView.h"
+#import "TFDropDownMenuCollectionViewCell.h"
+

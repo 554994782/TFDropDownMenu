@@ -7,46 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		038C86F7F79AF939BB25876B16C211A2 /* TFDropDownMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF61961357EF7C1C6784C71B78ADA2C0 /* TFDropDownMenuView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		100DCBFE39E91CF7A296FABFAB4D7CC6 /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 41EF0BA7476AF36D46AFCC4FDE57EA41 /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		14B65CE3038761FA8F6F5D1ECED6A562 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 007EA5943490AAA42CCD82252B9CBB2A /* NSArray+MASAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0C190D5C4C24E48ADEC8E9914B23E255 /* TFDropDownMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C692A70986FB8D2C29D45D8021CF736 /* TFDropDownMenuView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		100DCBFE39E91CF7A296FABFAB4D7CC6 /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 5624F59C2F3934C1275C78B55B615D3C /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		14B65CE3038761FA8F6F5D1ECED6A562 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A55CB9C5A30EE40A837928F0D6917C10 /* NSArray+MASAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		15A11BEDF63AE647F4A5ACFDF0186272 /* Pods-TFDropDownMenuDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6B47275E245888C8D9C6E1137439B1 /* Pods-TFDropDownMenuDemo-dummy.m */; };
-		1AF513D8D71B663D5422760106B13723 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = F2EECF67E64BB41F3E5056BCCC3593D2 /* MASConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		214DF0B6664033C87D6B846599FB477A /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A0D34C8EA86A615745ECE30144076298 /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		2534D51D1697CCEF996FA0E861ACE32E /* TFDropDownMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F5BE60BEBC6A2B85FC2C9C6970E6AC90 /* TFDropDownMenu-dummy.m */; };
-		3A463D3BA01EFE79C537BB9B3052143A /* TFMenuDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BF92EB6CD697493348DD46C7EF9E585 /* TFMenuDefinition.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		3E034B5ED1A72FBE50E794F99D7C0B05 /* TFIndexPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC81ECED0B157F9BE701CB17A46C88F /* TFIndexPatch.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		466869E41EB306F74C8A6E87CC1539BF /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B21BE95C20413115CC19AFFF3DA7A8 /* ViewController+MASAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		523F69012549DCADB26D11EFB6593B5B /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = 845CFABF57E4313EBBD022E8C1C38958 /* Masonry.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		548BBD5B63FA097F419829C3EE8EA068 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E144100E44D6C6E50C2270125B4E4D /* View+MASAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		5B46C39A3F939EDB676981756CC24007 /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF619E5431AB85A7E3214ED95250884 /* Masonry-dummy.m */; };
+		1AF513D8D71B663D5422760106B13723 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 08466D946136C556C676122395A5A796 /* MASConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		214DF0B6664033C87D6B846599FB477A /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 34AF6785493831BAC17846DAA768072B /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		32D8FE58A49429E8167C64EB4E019A56 /* TFDropDownMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A85D3436C5D225E39F9417F593B09C42 /* TFDropDownMenu-dummy.m */; };
+		466869E41EB306F74C8A6E87CC1539BF /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B10749F58D14870CA7CD81B859798D21 /* ViewController+MASAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		523F69012549DCADB26D11EFB6593B5B /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = 83C3BECB2DF7322E84F3E773DE91226F /* Masonry.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		548BBD5B63FA097F419829C3EE8EA068 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5AA41DE3CD3561BF8EE8757E6CAF34 /* View+MASAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5B46C39A3F939EDB676981756CC24007 /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8873D59DDB970BD86CBDE727CAAD6A7C /* Masonry-dummy.m */; };
 		5BF7EA8A67EE4A9B265479593CE905F6 /* Pods-TFDropDownMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 365930F8C4953BD628E99600B6E713CD /* Pods-TFDropDownMenu-dummy.m */; };
 		5E3052A25129ACFE515E429CCECC37AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		5EBFADB0ACACA114B98082EBD8FDA650 /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D474028161467ED68033A4FEAE06B08 /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		61C611ABFFC5FFF35ACE70883CB8F523 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD6DD31B2BD09B98014780F607C2228 /* MASLayoutConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5EBFADB0ACACA114B98082EBD8FDA650 /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 9096992872641BA080499C994B98C4DE /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		61C611ABFFC5FFF35ACE70883CB8F523 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 383901D577A298774983E6C5EEA2BA70 /* MASLayoutConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		6209E20926D79222E59F58B962BFAA1E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
-		6FBEF9BEF976F73220F5EA0246FA6674 /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 36D79623B8DF57817AC035EFC2007857 /* MASConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		75000539986FDBB55D1A2D9B4068D097 /* TFDropDownMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = D95A245683C98AB17035B74D2E27BF4D /* TFDropDownMenu.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7AC0D0965486ED43C064F1BC177ACBC9 /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C274B83449B027759DA1F625911698A /* MASUtilities.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		81C1291C7ABA4942277F5756671AEE37 /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 88C2C86F836633A3269DBF15CB1B8E29 /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		86B2DF4CC6E598AAA73D0CC6EEBA0E96 /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D405BAC81567E51F5B8D23278C082130 /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		92711327ED7920702A69A828271279AE /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 53F06C94BFC47719364730C73B14E611 /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6306A9301B8955BAEB6F2E6BFA243D45 /* TFDropDownMenuCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE328B6084A33B3B10BB32207436F819 /* TFDropDownMenuCollectionViewCell.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6FBEF9BEF976F73220F5EA0246FA6674 /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = F1CE5C243CF16D1E6456819732DB5D41 /* MASConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7AC0D0965486ED43C064F1BC177ACBC9 /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = FD79B1CD52C1D108E46388B4F6EE4DD6 /* MASUtilities.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		81C1291C7ABA4942277F5756671AEE37 /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = A9098B94891669C3418C48A5E87DA7D1 /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		833DAF80EAB904B7618A3362BCA3A41A /* TFDropDownMenuView.h in Headers */ = {isa = PBXBuildFile; fileRef = C675350199757F1922FDD5C9BA6A764C /* TFDropDownMenuView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		86B2DF4CC6E598AAA73D0CC6EEBA0E96 /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4200D652D419E112E4E9E1B2C4450819 /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		92711327ED7920702A69A828271279AE /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4164BB3AB8ECC70CA34327A3CA1EE7E5 /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		98127BC384269375314B9C0DB951059F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		99E00D593F76D7E6C96300345E211282 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 482E016BBB8450F86BC89D8E66CEEBAD /* MASConstraintMaker.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		9AB27A7F752AB644728D50B0228A070E /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = A63309D1ACBF1BD6010C4C2003256202 /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		9BFAE06AC2F3B426C64EEDBF8C99A69E /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = DF31A2E8390B5DC7E8C3C772155B6EBB /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		A9E98DF2E95D514EE5A1576A3A0774BD /* TFDropDownMenuView.h in Headers */ = {isa = PBXBuildFile; fileRef = A4CC6BA317D1C899A16513E158FEF206 /* TFDropDownMenuView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B5EC5518E18B05A5334C49ABBF4C78F7 /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = D2117F43E64F37EF8F3272C1DFDD23CE /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B953667D411D1DCD919CBD314F568A92 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E99CD89E59802961073FEE4F8F60833 /* NSLayoutConstraint+MASDebugAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		99E00D593F76D7E6C96300345E211282 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 315EBCDF33122E00BF1FA5AD5610ACA3 /* MASConstraintMaker.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9AB27A7F752AB644728D50B0228A070E /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = CA482B7B852772A2249E518A5F21A5C0 /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9BFAE06AC2F3B426C64EEDBF8C99A69E /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4267EA83CE086DFB04BDA6B64FDEE50E /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A2E8020C729B886BF0516879071E3D0A /* TFIndexPatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 24417FE030303AEC30E23796FD75EC2F /* TFIndexPatch.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A8F7CFAE41CA68BFDDC67F1D0A19E2A2 /* TFDropDownMenuCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = FA404E980FAF5DF38F21402CF5FC89AA /* TFDropDownMenuCollectionViewCell.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AC0C3FC49F1BAC44D2F3EF8E4C23BC76 /* TFMenuDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = 672514C5E1231C15109B4B7E3ADB99C7 /* TFMenuDefinition.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		ACE44A0EED960F7A890B4B5CA3209299 /* TFIndexPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B287AD33266F4383EAC84BABF8E004 /* TFIndexPatch.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B1328566B4EE662B704DA5E8C9AB715E /* TFDropDownMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 26B635C56E1EE2EA543AA2D90910FBB4 /* TFDropDownMenu.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B5EC5518E18B05A5334C49ABBF4C78F7 /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = C9F23416E54A8577C5418650A16565B8 /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B953667D411D1DCD919CBD314F568A92 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D76D4FB7C5603955574C9FB5DEA2A525 /* NSLayoutConstraint+MASDebugAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		BF09E664E2891AAFFC8592F6B1DC3AE7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		C6E83C10646E2DF6C83A578CE6AF0E5A /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = BBAE7FA00DD47241654CF0258A5CA1D2 /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		CEF7E139022FFA4F5C99D4DC5DE67990 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = D71FC2353E6BE57D2BC2CC7683CF3977 /* MASViewAttribute.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D04CACB5127FBA17BFD186B82CD3FB74 /* TFIndexPatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 87C8CE686F1D3914CCA8F72355D4DCD1 /* TFIndexPatch.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		D8D72BEC4364E9F77BCC6B8AB4E30DF3 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E45B9ED019C02648A367FE5D1A81CB9 /* MASViewConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C6E83C10646E2DF6C83A578CE6AF0E5A /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D1820D241BCEE436615D29AFC6B1F015 /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CEF7E139022FFA4F5C99D4DC5DE67990 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = DE75198D201EDD59E3A95869A9836DF2 /* MASViewAttribute.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D8D72BEC4364E9F77BCC6B8AB4E30DF3 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = AD030563847926630A5A010CA89694D5 /* MASViewConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F0B56A7D38A399A2F67F9920C9526A66 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		F390D582745DF3516ADD4D910A2ACFFA /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1749E9CEF48CCF9F0906EBF8544FDD /* MASCompositeConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		F861D2DADCE8A8F94F1DCB22EB8A6CE2 /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = A4DFED9B5126DE41FBA69003E83064A7 /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		FB415F79751F1A1F2203183C3CEE0723 /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D66FB8F0EAAAB581DD24651134DE81B /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F390D582745DF3516ADD4D910A2ACFFA /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B9DEED74EE94971B0CBE2222516E2B /* MASCompositeConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F861D2DADCE8A8F94F1DCB22EB8A6CE2 /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = DE206D3D0FCB17C588A7D9E1C2191BA7 /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FB415F79751F1A1F2203183C3CEE0723 /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = CF997381E99E70A1FB2D2D449C38AE17 /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,63 +83,65 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		007EA5943490AAA42CCD82252B9CBB2A /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
-		02E660A20AF5320EFC08F6DC7AE49714 /* Masonry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-prefix.pch"; sourceTree = "<group>"; };
 		04359B5DFAE5F1C0607FEB7E7516A5C6 /* Pods-TFDropDownMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TFDropDownMenu.release.xcconfig"; sourceTree = "<group>"; };
+		08466D946136C556C676122395A5A796 /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
+		0B5AA41DE3CD3561BF8EE8757E6CAF34 /* View+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "View+MASAdditions.m"; path = "Masonry/View+MASAdditions.m"; sourceTree = "<group>"; };
+		17B287AD33266F4383EAC84BABF8E004 /* TFIndexPatch.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TFIndexPatch.m; path = TFDropDownMenu/Custom/TFIndexPatch.m; sourceTree = "<group>"; };
 		1953D086C7B9925796C10F6E59C3AA9D /* Pods-TFDropDownMenu-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TFDropDownMenu-acknowledgements.plist"; sourceTree = "<group>"; };
-		1C274B83449B027759DA1F625911698A /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
 		23FAF8F2D3654A3B293B78376014B0B6 /* Pods-TFDropDownMenuDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TFDropDownMenuDemo-frameworks.sh"; sourceTree = "<group>"; };
-		2BF619E5431AB85A7E3214ED95250884 /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
+		24417FE030303AEC30E23796FD75EC2F /* TFIndexPatch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TFIndexPatch.h; path = TFDropDownMenu/Custom/TFIndexPatch.h; sourceTree = "<group>"; };
+		26B635C56E1EE2EA543AA2D90910FBB4 /* TFDropDownMenu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TFDropDownMenu.h; path = TFDropDownMenu/TFDropDownMenu.h; sourceTree = "<group>"; };
 		2D6B47275E245888C8D9C6E1137439B1 /* Pods-TFDropDownMenuDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TFDropDownMenuDemo-dummy.m"; sourceTree = "<group>"; };
-		2E45B9ED019C02648A367FE5D1A81CB9 /* MASViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewConstraint.m; path = Masonry/MASViewConstraint.m; sourceTree = "<group>"; };
 		311E57E01B5CAF0F9CE1243F5433630B /* Pods-TFDropDownMenuDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TFDropDownMenuDemo-resources.sh"; sourceTree = "<group>"; };
+		315EBCDF33122E00BF1FA5AD5610ACA3 /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
+		318AA191FA803648AA714E9E89880B02 /* Masonry.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.xcconfig; sourceTree = "<group>"; };
 		3345234CE3A809ADC8197159DC828163 /* Pods-TFDropDownMenuDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TFDropDownMenuDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		34AF6785493831BAC17846DAA768072B /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
 		365930F8C4953BD628E99600B6E713CD /* Pods-TFDropDownMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TFDropDownMenu-dummy.m"; sourceTree = "<group>"; };
-		36D79623B8DF57817AC035EFC2007857 /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
-		3A59FA08F106E7842073A228B8A60D25 /* Masonry.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.xcconfig; sourceTree = "<group>"; };
+		383901D577A298774983E6C5EEA2BA70 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
 		3AEA6FFD30D0E8711E469AD25FE302FD /* libPods-TFDropDownMenu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-TFDropDownMenu.a"; path = "libPods-TFDropDownMenu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D66FB8F0EAAAB581DD24651134DE81B /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		4010E17A02000386F8DE4B58F00E9CA8 /* libTFDropDownMenu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libTFDropDownMenu.a; path = libTFDropDownMenu.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		41EF0BA7476AF36D46AFCC4FDE57EA41 /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
-		482E016BBB8450F86BC89D8E66CEEBAD /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
-		51E144100E44D6C6E50C2270125B4E4D /* View+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "View+MASAdditions.m"; path = "Masonry/View+MASAdditions.m"; sourceTree = "<group>"; };
-		523BE2934D24617756D08C663AED3173 /* TFDropDownMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TFDropDownMenu-prefix.pch"; sourceTree = "<group>"; };
-		53F06C94BFC47719364730C73B14E611 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		4164BB3AB8ECC70CA34327A3CA1EE7E5 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		4200D652D419E112E4E9E1B2C4450819 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		4267EA83CE086DFB04BDA6B64FDEE50E /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		5624F59C2F3934C1275C78B55B615D3C /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
 		56C6D9BB5A352DD339E5B5399DE3AF11 /* libPods-TFDropDownMenuDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-TFDropDownMenuDemo.a"; path = "libPods-TFDropDownMenuDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D3BC7B80B153AB838ACDBBEDA490B3D /* Pods-TFDropDownMenuDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TFDropDownMenuDemo-acknowledgements.plist"; sourceTree = "<group>"; };
-		6BF92EB6CD697493348DD46C7EF9E585 /* TFMenuDefinition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TFMenuDefinition.h; path = TFDropDownMenu/Custom/TFMenuDefinition.h; sourceTree = "<group>"; };
-		6EC81ECED0B157F9BE701CB17A46C88F /* TFIndexPatch.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TFIndexPatch.m; path = TFDropDownMenu/Custom/TFIndexPatch.m; sourceTree = "<group>"; };
-		845CFABF57E4313EBBD022E8C1C38958 /* Masonry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Masonry.h; path = Masonry/Masonry.h; sourceTree = "<group>"; };
-		87C8CE686F1D3914CCA8F72355D4DCD1 /* TFIndexPatch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TFIndexPatch.h; path = TFDropDownMenu/Custom/TFIndexPatch.h; sourceTree = "<group>"; };
-		88C2C86F836633A3269DBF15CB1B8E29 /* MASConstraint+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MASConstraint+Private.h"; path = "Masonry/MASConstraint+Private.h"; sourceTree = "<group>"; };
+		672514C5E1231C15109B4B7E3ADB99C7 /* TFMenuDefinition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TFMenuDefinition.h; path = TFDropDownMenu/Custom/TFMenuDefinition.h; sourceTree = "<group>"; };
+		75D443487FA63853B60DA6B941E7B5D8 /* Masonry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-prefix.pch"; sourceTree = "<group>"; };
+		8360462B84777C95E7AD9AB88D176E0E /* TFDropDownMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TFDropDownMenu.xcconfig; sourceTree = "<group>"; };
+		83C3BECB2DF7322E84F3E773DE91226F /* Masonry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Masonry.h; path = Masonry/Masonry.h; sourceTree = "<group>"; };
+		8873D59DDB970BD86CBDE727CAAD6A7C /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
 		8962BE26B64FD57058F95834338B63C2 /* Pods-TFDropDownMenuDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TFDropDownMenuDemo.release.xcconfig"; sourceTree = "<group>"; };
 		8C4924B2872B6748E1998C81E2F391F6 /* Pods-TFDropDownMenuDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TFDropDownMenuDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		8E99CD89E59802961073FEE4F8F60833 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+MASDebugAdditions.m"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		9096992872641BA080499C994B98C4DE /* MASViewConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewConstraint.h; path = Masonry/MASViewConstraint.h; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		99B9DEED74EE94971B0CBE2222516E2B /* MASCompositeConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
 		9B1DC64900161065703EE30719B23A22 /* Pods-TFDropDownMenu-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TFDropDownMenu-resources.sh"; sourceTree = "<group>"; };
-		9D474028161467ED68033A4FEAE06B08 /* MASViewConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewConstraint.h; path = Masonry/MASViewConstraint.h; sourceTree = "<group>"; };
-		A0D34C8EA86A615745ECE30144076298 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
-		A4CC6BA317D1C899A16513E158FEF206 /* TFDropDownMenuView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TFDropDownMenuView.h; path = TFDropDownMenu/TFDropDownMenuView.h; sourceTree = "<group>"; };
-		A4DFED9B5126DE41FBA69003E83064A7 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
-		A5B21BE95C20413115CC19AFFF3DA7A8 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
-		A63309D1ACBF1BD6010C4C2003256202 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASLayoutConstraint.h; path = Masonry/MASLayoutConstraint.h; sourceTree = "<group>"; };
+		9C692A70986FB8D2C29D45D8021CF736 /* TFDropDownMenuView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TFDropDownMenuView.m; path = TFDropDownMenu/TFDropDownMenuView.m; sourceTree = "<group>"; };
+		A55CB9C5A30EE40A837928F0D6917C10 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		A85D3436C5D225E39F9417F593B09C42 /* TFDropDownMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TFDropDownMenu-dummy.m"; sourceTree = "<group>"; };
+		A9098B94891669C3418C48A5E87DA7D1 /* MASConstraint+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MASConstraint+Private.h"; path = "Masonry/MASConstraint+Private.h"; sourceTree = "<group>"; };
+		AD030563847926630A5A010CA89694D5 /* MASViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewConstraint.m; path = Masonry/MASViewConstraint.m; sourceTree = "<group>"; };
+		B10749F58D14870CA7CD81B859798D21 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		BAD6DD31B2BD09B98014780F607C2228 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
-		BBAE7FA00DD47241654CF0258A5CA1D2 /* View+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "Masonry/View+MASAdditions.h"; sourceTree = "<group>"; };
-		BC1749E9CEF48CCF9F0906EBF8544FDD /* MASCompositeConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
 		BF22F160BAE5EF67ABD588602AFBFB51 /* Pods-TFDropDownMenu-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TFDropDownMenu-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C675350199757F1922FDD5C9BA6A764C /* TFDropDownMenuView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TFDropDownMenuView.h; path = TFDropDownMenu/TFDropDownMenuView.h; sourceTree = "<group>"; };
+		C9F23416E54A8577C5418650A16565B8 /* MASConstraintMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraintMaker.h; path = Masonry/MASConstraintMaker.h; sourceTree = "<group>"; };
+		CA482B7B852772A2249E518A5F21A5C0 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASLayoutConstraint.h; path = Masonry/MASLayoutConstraint.h; sourceTree = "<group>"; };
+		CF997381E99E70A1FB2D2D449C38AE17 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		D0B064246A3BCE4F6CDB9DD450305A2A /* libMasonry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMasonry.a; path = libMasonry.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2117F43E64F37EF8F3272C1DFDD23CE /* MASConstraintMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraintMaker.h; path = Masonry/MASConstraintMaker.h; sourceTree = "<group>"; };
-		D405BAC81567E51F5B8D23278C082130 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
-		D71FC2353E6BE57D2BC2CC7683CF3977 /* MASViewAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewAttribute.m; path = Masonry/MASViewAttribute.m; sourceTree = "<group>"; };
+		D1820D241BCEE436615D29AFC6B1F015 /* View+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "Masonry/View+MASAdditions.h"; sourceTree = "<group>"; };
+		D76D4FB7C5603955574C9FB5DEA2A525 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+MASDebugAdditions.m"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
 		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D95A245683C98AB17035B74D2E27BF4D /* TFDropDownMenu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TFDropDownMenu.h; path = TFDropDownMenu/TFDropDownMenu.h; sourceTree = "<group>"; };
-		DF31A2E8390B5DC7E8C3C772155B6EBB /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
-		F2EECF67E64BB41F3E5056BCCC3593D2 /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
-		F400C5E3A27724B97CF32F1814EFEDB8 /* TFDropDownMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TFDropDownMenu.xcconfig; sourceTree = "<group>"; };
+		DE206D3D0FCB17C588A7D9E1C2191BA7 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
+		DE75198D201EDD59E3A95869A9836DF2 /* MASViewAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewAttribute.m; path = Masonry/MASViewAttribute.m; sourceTree = "<group>"; };
+		EB77D43A19D7796DB75AB86BA86CA763 /* TFDropDownMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TFDropDownMenu-prefix.pch"; sourceTree = "<group>"; };
+		EE328B6084A33B3B10BB32207436F819 /* TFDropDownMenuCollectionViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TFDropDownMenuCollectionViewCell.m; path = TFDropDownMenu/Custom/TFDropDownMenuCollectionViewCell.m; sourceTree = "<group>"; };
+		F1CE5C243CF16D1E6456819732DB5D41 /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
 		F427113EFD2E57926D9D3943E42B2C58 /* Pods-TFDropDownMenu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TFDropDownMenu.debug.xcconfig"; sourceTree = "<group>"; };
-		F5BE60BEBC6A2B85FC2C9C6970E6AC90 /* TFDropDownMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TFDropDownMenu-dummy.m"; sourceTree = "<group>"; };
-		FF61961357EF7C1C6784C71B78ADA2C0 /* TFDropDownMenuView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TFDropDownMenuView.m; path = TFDropDownMenu/TFDropDownMenuView.m; sourceTree = "<group>"; };
+		FA404E980FAF5DF38F21402CF5FC89AA /* TFDropDownMenuCollectionViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TFDropDownMenuCollectionViewCell.h; path = TFDropDownMenu/Custom/TFDropDownMenuCollectionViewCell.h; sourceTree = "<group>"; };
+		FD79B1CD52C1D108E46388B4F6EE4DD6 /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,17 +181,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		13130BE929AFE4D831B7EE49016289CE /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				3A59FA08F106E7842073A228B8A60D25 /* Masonry.xcconfig */,
-				2BF619E5431AB85A7E3214ED95250884 /* Masonry-dummy.m */,
-				02E660A20AF5320EFC08F6DC7AE49714 /* Masonry-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Masonry";
-			sourceTree = "<group>";
-		};
 		1F56C180507B08A4D60FD3CC6F88B0D7 /* Pods-TFDropDownMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,22 +212,55 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		5BF6DFD5EB5B4C65B23E6C948A08A272 /* Support Files */ = {
+		45CB64F47BB9E33D5B146ED3314D8ECF /* TFDropDownMenu */ = {
 			isa = PBXGroup;
 			children = (
-				F400C5E3A27724B97CF32F1814EFEDB8 /* TFDropDownMenu.xcconfig */,
-				F5BE60BEBC6A2B85FC2C9C6970E6AC90 /* TFDropDownMenu-dummy.m */,
-				523BE2934D24617756D08C663AED3173 /* TFDropDownMenu-prefix.pch */,
+				26B635C56E1EE2EA543AA2D90910FBB4 /* TFDropDownMenu.h */,
+				FA404E980FAF5DF38F21402CF5FC89AA /* TFDropDownMenuCollectionViewCell.h */,
+				EE328B6084A33B3B10BB32207436F819 /* TFDropDownMenuCollectionViewCell.m */,
+				C675350199757F1922FDD5C9BA6A764C /* TFDropDownMenuView.h */,
+				9C692A70986FB8D2C29D45D8021CF736 /* TFDropDownMenuView.m */,
+				24417FE030303AEC30E23796FD75EC2F /* TFIndexPatch.h */,
+				17B287AD33266F4383EAC84BABF8E004 /* TFIndexPatch.m */,
+				672514C5E1231C15109B4B7E3ADB99C7 /* TFMenuDefinition.h */,
+				85B472B7CA18B89001C5B609213F1B62 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/TFDropDownMenu";
+			name = TFDropDownMenu;
+			path = TFDropDownMenu;
 			sourceTree = "<group>";
 		};
-		6512EC2E0F29A9F80F9267067397C83F /* Custom */ = {
+		4BE2F2ACBC1E62BD6224BFBC1E9A30F1 /* Masonry */ = {
 			isa = PBXGroup;
 			children = (
+				DE206D3D0FCB17C588A7D9E1C2191BA7 /* MASCompositeConstraint.h */,
+				99B9DEED74EE94971B0CBE2222516E2B /* MASCompositeConstraint.m */,
+				F1CE5C243CF16D1E6456819732DB5D41 /* MASConstraint.h */,
+				08466D946136C556C676122395A5A796 /* MASConstraint.m */,
+				A9098B94891669C3418C48A5E87DA7D1 /* MASConstraint+Private.h */,
+				C9F23416E54A8577C5418650A16565B8 /* MASConstraintMaker.h */,
+				315EBCDF33122E00BF1FA5AD5610ACA3 /* MASConstraintMaker.m */,
+				CA482B7B852772A2249E518A5F21A5C0 /* MASLayoutConstraint.h */,
+				383901D577A298774983E6C5EEA2BA70 /* MASLayoutConstraint.m */,
+				83C3BECB2DF7322E84F3E773DE91226F /* Masonry.h */,
+				FD79B1CD52C1D108E46388B4F6EE4DD6 /* MASUtilities.h */,
+				5624F59C2F3934C1275C78B55B615D3C /* MASViewAttribute.h */,
+				DE75198D201EDD59E3A95869A9836DF2 /* MASViewAttribute.m */,
+				9096992872641BA080499C994B98C4DE /* MASViewConstraint.h */,
+				AD030563847926630A5A010CA89694D5 /* MASViewConstraint.m */,
+				4267EA83CE086DFB04BDA6B64FDEE50E /* NSArray+MASAdditions.h */,
+				A55CB9C5A30EE40A837928F0D6917C10 /* NSArray+MASAdditions.m */,
+				CF997381E99E70A1FB2D2D449C38AE17 /* NSArray+MASShorthandAdditions.h */,
+				34AF6785493831BAC17846DAA768072B /* NSLayoutConstraint+MASDebugAdditions.h */,
+				D76D4FB7C5603955574C9FB5DEA2A525 /* NSLayoutConstraint+MASDebugAdditions.m */,
+				D1820D241BCEE436615D29AFC6B1F015 /* View+MASAdditions.h */,
+				0B5AA41DE3CD3561BF8EE8757E6CAF34 /* View+MASAdditions.m */,
+				4164BB3AB8ECC70CA34327A3CA1EE7E5 /* View+MASShorthandAdditions.h */,
+				4200D652D419E112E4E9E1B2C4450819 /* ViewController+MASAdditions.h */,
+				B10749F58D14870CA7CD81B859798D21 /* ViewController+MASAdditions.m */,
+				F6AFA97E83576645A0181800653BB727 /* Support Files */,
 			);
-			name = Custom;
+			name = Masonry;
+			path = Masonry;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -242,26 +268,21 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				D06C128E1CF785BD9576B97B078BC3B2 /* Pods */,
+				C0FE6F0FC0A8A6E78865946B4061A3ED /* Pods */,
 				8B26CA8F8BD5FB307A4D39EB709E5E9B /* Products */,
 				A62B45F5306D57E56204544E17FD4C5E /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		81DDAE3DE653A95D9F835764062EA31C /* TFDropDownMenu */ = {
+		85B472B7CA18B89001C5B609213F1B62 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D95A245683C98AB17035B74D2E27BF4D /* TFDropDownMenu.h */,
-				A4CC6BA317D1C899A16513E158FEF206 /* TFDropDownMenuView.h */,
-				FF61961357EF7C1C6784C71B78ADA2C0 /* TFDropDownMenuView.m */,
-				87C8CE686F1D3914CCA8F72355D4DCD1 /* TFIndexPatch.h */,
-				6EC81ECED0B157F9BE701CB17A46C88F /* TFIndexPatch.m */,
-				6BF92EB6CD697493348DD46C7EF9E585 /* TFMenuDefinition.h */,
-				6512EC2E0F29A9F80F9267067397C83F /* Custom */,
-				5BF6DFD5EB5B4C65B23E6C948A08A272 /* Support Files */,
+				8360462B84777C95E7AD9AB88D176E0E /* TFDropDownMenu.xcconfig */,
+				A85D3436C5D225E39F9417F593B09C42 /* TFDropDownMenu-dummy.m */,
+				EB77D43A19D7796DB75AB86BA86CA763 /* TFDropDownMenu-prefix.pch */,
 			);
-			name = TFDropDownMenu;
-			path = TFDropDownMenu;
+			name = "Support Files";
+			path = "../Target Support Files/TFDropDownMenu";
 			sourceTree = "<group>";
 		};
 		8B26CA8F8BD5FB307A4D39EB709E5E9B /* Products */ = {
@@ -284,40 +305,6 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		ADEDEE355A9EF1A3447283468A6C62B3 /* Masonry */ = {
-			isa = PBXGroup;
-			children = (
-				A4DFED9B5126DE41FBA69003E83064A7 /* MASCompositeConstraint.h */,
-				BC1749E9CEF48CCF9F0906EBF8544FDD /* MASCompositeConstraint.m */,
-				36D79623B8DF57817AC035EFC2007857 /* MASConstraint.h */,
-				F2EECF67E64BB41F3E5056BCCC3593D2 /* MASConstraint.m */,
-				88C2C86F836633A3269DBF15CB1B8E29 /* MASConstraint+Private.h */,
-				D2117F43E64F37EF8F3272C1DFDD23CE /* MASConstraintMaker.h */,
-				482E016BBB8450F86BC89D8E66CEEBAD /* MASConstraintMaker.m */,
-				A63309D1ACBF1BD6010C4C2003256202 /* MASLayoutConstraint.h */,
-				BAD6DD31B2BD09B98014780F607C2228 /* MASLayoutConstraint.m */,
-				845CFABF57E4313EBBD022E8C1C38958 /* Masonry.h */,
-				1C274B83449B027759DA1F625911698A /* MASUtilities.h */,
-				41EF0BA7476AF36D46AFCC4FDE57EA41 /* MASViewAttribute.h */,
-				D71FC2353E6BE57D2BC2CC7683CF3977 /* MASViewAttribute.m */,
-				9D474028161467ED68033A4FEAE06B08 /* MASViewConstraint.h */,
-				2E45B9ED019C02648A367FE5D1A81CB9 /* MASViewConstraint.m */,
-				DF31A2E8390B5DC7E8C3C772155B6EBB /* NSArray+MASAdditions.h */,
-				007EA5943490AAA42CCD82252B9CBB2A /* NSArray+MASAdditions.m */,
-				3D66FB8F0EAAAB581DD24651134DE81B /* NSArray+MASShorthandAdditions.h */,
-				A0D34C8EA86A615745ECE30144076298 /* NSLayoutConstraint+MASDebugAdditions.h */,
-				8E99CD89E59802961073FEE4F8F60833 /* NSLayoutConstraint+MASDebugAdditions.m */,
-				BBAE7FA00DD47241654CF0258A5CA1D2 /* View+MASAdditions.h */,
-				51E144100E44D6C6E50C2270125B4E4D /* View+MASAdditions.m */,
-				53F06C94BFC47719364730C73B14E611 /* View+MASShorthandAdditions.h */,
-				D405BAC81567E51F5B8D23278C082130 /* ViewController+MASAdditions.h */,
-				A5B21BE95C20413115CC19AFFF3DA7A8 /* ViewController+MASAdditions.m */,
-				13130BE929AFE4D831B7EE49016289CE /* Support Files */,
-			);
-			name = Masonry;
-			path = Masonry;
-			sourceTree = "<group>";
-		};
 		B205A21077A4B3EC336C8A40288B2198 /* Pods-TFDropDownMenuDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -333,26 +320,38 @@
 			path = "Target Support Files/Pods-TFDropDownMenuDemo";
 			sourceTree = "<group>";
 		};
-		D06C128E1CF785BD9576B97B078BC3B2 /* Pods */ = {
+		C0FE6F0FC0A8A6E78865946B4061A3ED /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				ADEDEE355A9EF1A3447283468A6C62B3 /* Masonry */,
-				81DDAE3DE653A95D9F835764062EA31C /* TFDropDownMenu */,
+				4BE2F2ACBC1E62BD6224BFBC1E9A30F1 /* Masonry */,
+				45CB64F47BB9E33D5B146ED3314D8ECF /* TFDropDownMenu */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F6AFA97E83576645A0181800653BB727 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				318AA191FA803648AA714E9E89880B02 /* Masonry.xcconfig */,
+				8873D59DDB970BD86CBDE727CAAD6A7C /* Masonry-dummy.m */,
+				75D443487FA63853B60DA6B941E7B5D8 /* Masonry-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Masonry";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		A9C568165B47D496C92AE9EFC27CCB5B /* Headers */ = {
+		32BB1AFDDF962E6E5AE172908F250EE1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75000539986FDBB55D1A2D9B4068D097 /* TFDropDownMenu.h in Headers */,
-				A9E98DF2E95D514EE5A1576A3A0774BD /* TFDropDownMenuView.h in Headers */,
-				D04CACB5127FBA17BFD186B82CD3FB74 /* TFIndexPatch.h in Headers */,
-				3A463D3BA01EFE79C537BB9B3052143A /* TFMenuDefinition.h in Headers */,
+				B1328566B4EE662B704DA5E8C9AB715E /* TFDropDownMenu.h in Headers */,
+				A8F7CFAE41CA68BFDDC67F1D0A19E2A2 /* TFDropDownMenuCollectionViewCell.h in Headers */,
+				833DAF80EAB904B7618A3362BCA3A41A /* TFDropDownMenuView.h in Headers */,
+				A2E8020C729B886BF0516879071E3D0A /* TFIndexPatch.h in Headers */,
+				AC0C3FC49F1BAC44D2F3EF8E4C23BC76 /* TFMenuDefinition.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,9 +384,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14144797CE2774B32904200E6F4EDC4A /* Build configuration list for PBXNativeTarget "TFDropDownMenu" */;
 			buildPhases = (
-				2F266C7985D6E40991642E07C5443944 /* Sources */,
+				0F2B6DAD45374B6A22C05141A71A8233 /* Sources */,
 				4FB120CB7CAFB64F05548531AC24E82F /* Frameworks */,
-				A9C568165B47D496C92AE9EFC27CCB5B /* Headers */,
+				32BB1AFDDF962E6E5AE172908F250EE1 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -481,6 +480,17 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0F2B6DAD45374B6A22C05141A71A8233 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32D8FE58A49429E8167C64EB4E019A56 /* TFDropDownMenu-dummy.m in Sources */,
+				6306A9301B8955BAEB6F2E6BFA243D45 /* TFDropDownMenuCollectionViewCell.m in Sources */,
+				0C190D5C4C24E48ADEC8E9914B23E255 /* TFDropDownMenuView.m in Sources */,
+				ACE44A0EED960F7A890B4B5CA3209299 /* TFIndexPatch.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27E8E3A06AAFF112FF7BC4F0117165D8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -496,16 +506,6 @@
 				B953667D411D1DCD919CBD314F568A92 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				548BBD5B63FA097F419829C3EE8EA068 /* View+MASAdditions.m in Sources */,
 				466869E41EB306F74C8A6E87CC1539BF /* ViewController+MASAdditions.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2F266C7985D6E40991642E07C5443944 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2534D51D1697CCEF996FA0E861ACE32E /* TFDropDownMenu-dummy.m in Sources */,
-				038C86F7F79AF939BB25876B16C211A2 /* TFDropDownMenuView.m in Sources */,
-				3E034B5ED1A72FBE50E794F99D7C0B05 /* TFIndexPatch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -665,7 +665,7 @@
 		};
 		4C93EA1F2AC748B98F9C726DE829238D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A59FA08F106E7842073A228B8A60D25 /* Masonry.xcconfig */;
+			baseConfigurationReference = 318AA191FA803648AA714E9E89880B02 /* Masonry.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -689,7 +689,7 @@
 		};
 		515564C037819D7EC6462990D818EC5A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A59FA08F106E7842073A228B8A60D25 /* Masonry.xcconfig */;
+			baseConfigurationReference = 318AA191FA803648AA714E9E89880B02 /* Masonry.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -714,7 +714,7 @@
 		};
 		528C1757C3FE92C1F2850D5ADE58EDD1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F400C5E3A27724B97CF32F1814EFEDB8 /* TFDropDownMenu.xcconfig */;
+			baseConfigurationReference = 8360462B84777C95E7AD9AB88D176E0E /* TFDropDownMenu.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -784,7 +784,7 @@
 		};
 		C0F67F0C3177F9D1E0949363DB0F5040 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F400C5E3A27724B97CF32F1814EFEDB8 /* TFDropDownMenu.xcconfig */;
+			baseConfigurationReference = 8360462B84777C95E7AD9AB88D176E0E /* TFDropDownMenu.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

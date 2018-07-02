@@ -8,6 +8,7 @@
 
 #import "TFDropDownMenuView.h"
 #import "Masonry.h"
+#import "TFDropDownMenuCollectionViewCell.h"
 
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
@@ -42,7 +43,7 @@
 @property (strong, nonatomic) UICollectionView *leftCollectionView;//
 @property (strong, nonatomic) UITableView *rightTableView;//
 @property (strong, nonatomic) UICollectionView *rightCollectionView;//
-
+@property (strong, nonatomic) UIScrollView *customScrollView;//
 
 @end
 
@@ -88,8 +89,7 @@
     self.cellHeight = 44;
     self.ratioLeftToScreen = 0.5;
     self.kAnimationDuration = 0.25;
-    self.textAlignment = TFDropDownTextAlignmentLeft;
-    
+    self.customViews = [NSMutableArray array];
     self.firstArray = [NSMutableArray array];
     self.secondArray = [NSMutableArray array];
     self.currentSelectSections = [NSMutableArray array];
@@ -195,14 +195,14 @@
     if (!_leftCollectionView) {
         UICollectionViewFlowLayout *collectionViewLayout = [[UICollectionViewFlowLayout alloc] init];
         collectionViewLayout.itemSize = CGSizeMake((self.bounds.size.width-2)/2, _cellHeight);
-        collectionViewLayout.minimumInteritemSpacing = 0.5;
-        collectionViewLayout.minimumLineSpacing = 0.5;
+        collectionViewLayout.minimumInteritemSpacing = 1;
+        collectionViewLayout.minimumLineSpacing = 1;
         
         _leftCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width * _ratioLeftToScreen, 0) collectionViewLayout:collectionViewLayout];
         _leftCollectionView.delegate = self;
         _leftCollectionView.dataSource = self;
-        _leftCollectionView.backgroundColor = [UIColor colorWithWhite:0.99 alpha:1];
-        [_leftCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"UICollectionViewCell"];
+        _leftCollectionView.backgroundColor = _separatorColor;
+        [_leftCollectionView registerClass:[TFDropDownMenuCollectionViewCell class] forCellWithReuseIdentifier:@"TFDropDownMenuCollectionViewCell"];
     }
     return _leftCollectionView;
 }
@@ -213,12 +213,19 @@
         _rightCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(self.frame.origin.x + self.bounds.size.width * _ratioLeftToScreen, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width * (1 - _ratioLeftToScreen), 0) collectionViewLayout:collectionViewLayout];
         _rightCollectionView.delegate = self;
         _rightCollectionView.dataSource = self;
-        _rightCollectionView.backgroundColor = [UIColor colorWithWhite:0.99 alpha:1];
-        [_rightCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"UICollectionViewCell"];
+        _rightCollectionView.backgroundColor = _separatorColor;
+        [_rightCollectionView registerClass:[TFDropDownMenuCollectionViewCell class] forCellWithReuseIdentifier:@"TFDropDownMenuCollectionViewCell"];
     }
     return _rightCollectionView;
 }
 
+- (UIScrollView *)customScrollView {
+    if (!_customScrollView) {
+        _customScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(self.frame.origin.x + self.bounds.size.width * _ratioLeftToScreen, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width * (1 - _ratioLeftToScreen), 0)];
+        _customScrollView.backgroundColor = [UIColor whiteColor];
+    }
+    return _rightCollectionView;
+}
 /// 背景layer
 - (CALayer *)creatBackgroundLayer:(CGPoint)position backgroundColor:(UIColor *)backgroundColor {
     CALayer *layer = [[CALayer alloc] init];
@@ -255,7 +262,7 @@
     [bezierPath moveToPoint:CGPointMake(5, 5)];
     [bezierPath addLineToPoint:CGPointMake(10, 0)];
     [bezierPath closePath];
-
+    
     // shapeLayer
     CAShapeLayer *shapeLayer = [[CAShapeLayer alloc] init];
     shapeLayer.path = bezierPath.CGPath;
@@ -272,7 +279,7 @@
     [bezierPath moveToPoint:CGPointMake(0, 0)];
     [bezierPath addLineToPoint:CGPointMake(0, self.bounds.size.height - 16)];
     [bezierPath closePath];
-
+    
     // separatorLayer
     CAShapeLayer *separatorLayer = [[CAShapeLayer alloc] init];
     separatorLayer.path = bezierPath.CGPath;
@@ -419,14 +426,8 @@
     NSString *cellID = @"cellID";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellID];
         cell.textLabel.textColor = _cellTextUnSelectColor;
-        if (self.textAlignment == TFDropDownTextAlignmentCenter) {
-            cell.textLabel.textAlignment = NSTextAlignmentCenter;
-        } else {
-            cell.textLabel.textAlignment = NSTextAlignmentLeft;
-        }
-        
         cell.textLabel.highlightedTextColor = _cellTextSelectColor;
         cell.textLabel.font = [UIFont systemFontOfSize:_cellTitleFontSize];
         cell.detailTextLabel.textColor = _cellTextUnSelectColor;
@@ -475,7 +476,7 @@
         } else {
             cell.imageView.image = nil;
         }
-
+        
         // 选中上次选择的行
         CATextLayer *titlelayer = _currentTitleLayers[_currentSelectColumn];
         
@@ -500,7 +501,19 @@
             }];
             
             if (haveItems) {
-                [_rightTableView reloadData];
+                TFDropDownMenuStyle style = TFDropDownMenuStyleTableView;
+                if (_currentSelectColumn < _menuStyleArray.count) {
+                    style = [NSString stringWithFormat:@"%@", _menuStyleArray[_currentSelectColumn]].integerValue;
+                }
+
+                switch (style) {
+                    case TFDropDownMenuStyleTableView: {
+                        [_rightTableView reloadData];
+                        break;
+                    }
+                    default:
+                        break;
+                }
             }else {
                 // 收回列表
                 titleLayer.string = [self titleForColumn:_currentSelectColumn section:indexPath.row];
@@ -532,8 +545,6 @@
             }
         }
     }
-    
-    
 }
 // MARK: - UICollectionViewDataSource, UICollectionViewDelegate
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -546,14 +557,82 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *collectionCell = @"collectionCell";
-    UICollectionViewCell *cell = [_leftCollectionView dequeueReusableCellWithReuseIdentifier:@"UICollectionViewCell" forIndexPath:indexPath];
+    TFDropDownMenuCollectionViewCell *cell = [_leftCollectionView dequeueReusableCellWithReuseIdentifier:@"TFDropDownMenuCollectionViewCell" forIndexPath:indexPath];
+    cell.titleLabel.textColor = _cellTextUnSelectColor;
+    cell.titleLabel.highlightedTextColor = _cellTextSelectColor;
+    cell.titleLabel.font = [UIFont systemFontOfSize:_cellTitleFontSize];
+    cell.titleLabel.textAlignment = NSTextAlignmentCenter;
+    cell.backgroundColor = _cellUnselectBackgroundColor;
+    if (collectionView == _leftCollectionView) {
+        // 一级列表
+        cell.titleLabel.text = [self titleForColumn:_currentSelectColumn section:indexPath.row];
+        // 选中上次选择的行
+        NSInteger select = [NSString stringWithFormat:@"%@", _currentSelectSections[_currentSelectColumn]].integerValue;
+        if (select == indexPath.row) {
+            cell.titleLabel.textColor = _cellTextSelectColor;
+            cell.backgroundColor = _cellSelectBackgroundColor;
+            
+        }
+    } else {
+        // 二级列表
+        NSInteger currentSelectedSection = [NSString stringWithFormat:@"%@", _currentSelectSections[_currentSelectColumn]].integerValue;
+        
+        cell.titleLabel.text = [self titleForColumn:_currentSelectColumn section:currentSelectedSection row:indexPath.row];
+        // 选中上次选择的行
+        CATextLayer *titlelayer = _currentTitleLayers[_currentSelectColumn];
+        
+        if ([cell.titleLabel.text isEqualToString:[NSString stringWithFormat:@"%@", titlelayer.string]] && _lastSelectSection == currentSelectedSection) {
+            cell.titleLabel.textColor = _cellTextSelectColor;
+            cell.backgroundColor = _cellSelectBackgroundColor;
+        }
+    }
+    
     return cell;
     
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    
+    if (_delegate) {
+        CATextLayer *titleLayer = _currentTitleLayers[_currentSelectColumn];
+        
+        if (collectionView == _leftCollectionView) {
+            // 一级列表
+            
+            _currentSelectSections[_currentSelectColumn] = [NSNumber numberWithInteger:indexPath.row];
+            BOOL haveItems = ([self numberOfRowsInColumn:_currentSelectColumn section:indexPath.row] > 0);
+            [self animateForTitleLayer:titleLayer indicator:_currentIndicatorLayers[_currentSelectColumn] show:YES complete:^{
+            }];
+            
+            if (haveItems) {
+//                [_rightCollectionView reloadData];
+            }else {
+                // 收回列表
+                titleLayer.string = [self titleForColumn:_currentSelectColumn section:indexPath.row];
+                _lastSelectSection = [NSString stringWithFormat:@"%@", _currentSelectSections[_currentSelectColumn]].integerValue;
+                [self animateForIndicator:_currentIndicatorLayers[_currentSelectColumn] titlelayer:titleLayer show:NO complete:^{
+                    self.isShow = NO;
+                }];
+                if ([self.delegate respondsToSelector:@selector(menuView:selectIndex:)]) {
+                    TFIndexPatch *index = [[TFIndexPatch alloc] initWithColumn:_currentSelectColumn section:indexPath.row row:-1];
+                    [self.delegate menuView:self selectIndex:index];
+                }
+            }
+        } else {
+            // 二级列表
+            _lastSelectSection = [NSString stringWithFormat:@"%@", _currentSelectSections[_currentSelectColumn]].integerValue;
+            
+            titleLayer.string = [self titleForColumn:_currentSelectColumn section:_lastSelectSection row:indexPath.row];
+            
+            [self animateForIndicator:_currentIndicatorLayers[_currentSelectColumn] titlelayer:titleLayer show:NO complete:^{
+                self.isShow = NO;
+            }];
+            
+            if ([self.delegate respondsToSelector:@selector(menuView:selectIndex:)]) {
+                TFIndexPatch *index = [[TFIndexPatch alloc] initWithColumn:_currentSelectColumn section:_lastSelectSection row:indexPath.row];
+                [self.delegate menuView:self selectIndex:index];
+            }
+        }
+    }
 }
 
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
@@ -649,10 +728,10 @@
         if ([self numberOfRowsInColumn:i section:0] > 0) {
             TFIndexPatch *index = [[TFIndexPatch alloc] initWithColumn:i section:0 row:0];
             [self selectedAtIndex:index];
-         } else {
-             TFIndexPatch *index = [[TFIndexPatch alloc] initWithColumn:i section:0 row:-1];
-             [self selectedAtIndex:index];
-         }
+        } else {
+            TFIndexPatch *index = [[TFIndexPatch alloc] initWithColumn:i section:0 row:-1];
+            [self selectedAtIndex:index];
+        }
     }
 }
 
@@ -721,47 +800,287 @@
             break;
         }
     }
-    CGFloat tempHeight = numberOfSection * _cellHeight;
-    CGFloat heightForTableView = (tempHeight > _tableViewHeight) ? _tableViewHeight : tempHeight;
+    
     
     if (show) {
-        if (haveItems) {
-            self.leftTableView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width * _ratioLeftToScreen, 0);
-            self.rightTableView.frame = CGRectMake(self.frame.origin.x + self.bounds.size.width * _ratioLeftToScreen, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width * (1 - _ratioLeftToScreen), 0);
-            [self.superview addSubview:self.leftTableView];
-            [self.superview addSubview:self.rightTableView];
-            [UIView animateWithDuration:_kAnimationDuration animations:^{
-                self.leftTableView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width * self.ratioLeftToScreen, heightForTableView);
-                self.rightTableView.frame = CGRectMake(self.frame.origin.x + self.bounds.size.width * self.ratioLeftToScreen, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width * (1 - self.ratioLeftToScreen), heightForTableView);
-            }];
-        } else {
-            [self.rightTableView removeFromSuperview];
-            self.leftTableView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width, 0);
-            [self.superview addSubview:self.leftTableView];
-            [UIView animateWithDuration:_kAnimationDuration animations:^{
-                self.leftTableView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width, heightForTableView);
-            }];
-        }
+        [self showListViewWithHaveItems:haveItems];
     } else {
-        if (haveItems) {
-            [UIView animateWithDuration:_kAnimationDuration animations:^{
-                self.leftTableView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width * self.ratioLeftToScreen, 0);
-                self.rightTableView.frame = CGRectMake(self.frame.origin.x + self.bounds.size.width * self.ratioLeftToScreen, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width * (1 - self.ratioLeftToScreen), 0);
-            } completion:^(BOOL finished) {
-                [self.leftTableView removeFromSuperview];
-                [self.rightTableView removeFromSuperview];
-            }];
-        } else {
-            [UIView animateWithDuration:_kAnimationDuration animations:^{
-                self.leftTableView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width, 0);
-            } completion:^(BOOL finished) {
-                [self.leftTableView removeFromSuperview];
-            }];
-        }
-        
+        [self hiddenListViewWithHaveItems:haveItems];
     }
     if (complete) {
         complete();
+    }
+}
+
+- (void)showListViewWithHaveItems:(BOOL)haveItems {
+    TFDropDownMenuStyle style = TFDropDownMenuStyleTableView;
+    if (_currentSelectColumn < _menuStyleArray.count) {
+        style = [NSString stringWithFormat:@"%@", _menuStyleArray[_currentSelectColumn]].integerValue;
+    }
+    NSInteger numberOfSection = [self numberOfSectionsInColumn:_currentSelectColumn];
+    CGFloat tempHeight = numberOfSection * _cellHeight;
+    CGFloat heightForTableView = (tempHeight > _tableViewHeight) ? _tableViewHeight : tempHeight;
+    if (haveItems) {
+        switch (style) {
+            case TFDropDownMenuStyleTableView: {
+                [self.leftCollectionView removeFromSuperview];
+                [self.rightCollectionView removeFromSuperview];
+                [self.customScrollView removeFromSuperview];
+                self.leftTableView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width * _ratioLeftToScreen, 0);
+                self.rightTableView.frame = CGRectMake(self.frame.origin.x + self.bounds.size.width * _ratioLeftToScreen, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width * (1 - _ratioLeftToScreen), 0);
+                [self.superview addSubview:self.leftTableView];
+                [self.superview addSubview:self.rightTableView];
+                [UIView animateWithDuration:_kAnimationDuration animations:^{
+                    self.leftTableView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width * self.ratioLeftToScreen, heightForTableView);
+                    self.rightTableView.frame = CGRectMake(self.frame.origin.x + self.bounds.size.width * self.ratioLeftToScreen, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width * (1 - self.ratioLeftToScreen), heightForTableView);
+                }];
+                break;
+            }
+            case TFDropDownMenuStyleCollectionView: {
+                tempHeight = ((numberOfSection+1)/2) * _cellHeight;
+                heightForTableView = (tempHeight > _tableViewHeight) ? _tableViewHeight : tempHeight;
+                [self.rightCollectionView removeFromSuperview];
+                [self.leftTableView removeFromSuperview];
+                [self.rightTableView removeFromSuperview];
+                [self.customScrollView removeFromSuperview];
+                [self.superview addSubview:self.leftCollectionView];
+//                [self.leftCollectionView reloadData];
+                self.leftCollectionView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width, 0);
+                
+                [UIView animateWithDuration:_kAnimationDuration animations:^{
+                    self.leftCollectionView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width, heightForTableView);
+                }];
+                break;
+            }
+            case TFDropDownMenuStyleCustom: {
+                [self.leftCollectionView removeFromSuperview];
+                [self.rightCollectionView removeFromSuperview];
+                [self.leftTableView removeFromSuperview];
+                [self.rightTableView removeFromSuperview];
+                [self.customScrollView removeFromSuperview];
+                if (_currentSelectColumn < _customViews.count) {
+                    UIView *view = _customViews[_currentSelectColumn];
+                    if (view != nil) {
+                        CGFloat viewHeight = view.frame.size.height > 0 ? view.frame.size.height : _cellHeight;
+                        viewHeight = viewHeight > _tableViewHeight ? _tableViewHeight : viewHeight;
+                        view.frame = CGRectMake(0, 0, self.bounds.size.width, viewHeight);
+                        self.customScrollView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width, 0);
+                        [self.customScrollView addSubview:view];
+                        [self.superview addSubview:self.customScrollView];
+                        [UIView animateWithDuration:_kAnimationDuration animations:^{
+                            self.customScrollView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width, viewHeight);
+                        }];
+                    } else {
+                        self.leftTableView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width * _ratioLeftToScreen, 0);
+                        self.rightTableView.frame = CGRectMake(self.frame.origin.x + self.bounds.size.width * _ratioLeftToScreen, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width * (1 - _ratioLeftToScreen), 0);
+                        [self.superview addSubview:self.leftTableView];
+                        [self.superview addSubview:self.rightTableView];
+                        [UIView animateWithDuration:_kAnimationDuration animations:^{
+                            self.leftTableView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width * self.ratioLeftToScreen, heightForTableView);
+                            self.rightTableView.frame = CGRectMake(self.frame.origin.x + self.bounds.size.width * self.ratioLeftToScreen, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width * (1 - self.ratioLeftToScreen), heightForTableView);
+                        }];
+                    }
+                } else {
+                    self.leftTableView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width * _ratioLeftToScreen, 0);
+                    self.rightTableView.frame = CGRectMake(self.frame.origin.x + self.bounds.size.width * _ratioLeftToScreen, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width * (1 - _ratioLeftToScreen), 0);
+                    [self.superview addSubview:self.leftTableView];
+                    [self.superview addSubview:self.rightTableView];
+                    [UIView animateWithDuration:_kAnimationDuration animations:^{
+                        self.leftTableView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width * self.ratioLeftToScreen, heightForTableView);
+                        self.rightTableView.frame = CGRectMake(self.frame.origin.x + self.bounds.size.width * self.ratioLeftToScreen, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width * (1 - self.ratioLeftToScreen), heightForTableView);
+                    }];
+                }
+                break;
+            }
+            default:
+                break;
+        }
+        
+    } else {
+        switch (style) {
+            case TFDropDownMenuStyleTableView: {
+                [self.leftCollectionView removeFromSuperview];
+                [self.rightCollectionView removeFromSuperview];
+                [self.rightTableView removeFromSuperview];
+                [self.customScrollView removeFromSuperview];
+                self.leftTableView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width, 0);
+                [self.superview addSubview:self.leftTableView];
+                [UIView animateWithDuration:_kAnimationDuration animations:^{
+                    self.leftTableView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width, heightForTableView);
+                }];
+                break;
+            }
+            case TFDropDownMenuStyleCollectionView: {
+                tempHeight = ((numberOfSection+1)/2) * _cellHeight;
+                heightForTableView = (tempHeight > _tableViewHeight) ? _tableViewHeight : tempHeight;
+                [self.rightCollectionView removeFromSuperview];
+                [self.leftTableView removeFromSuperview];
+                [self.rightTableView removeFromSuperview];
+                [self.customScrollView removeFromSuperview];
+                self.leftCollectionView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width, 0);
+                [self.superview addSubview:self.leftCollectionView];
+                [UIView animateWithDuration:_kAnimationDuration animations:^{
+                    self.leftCollectionView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width, heightForTableView);
+                }];
+                break;
+            }
+            case TFDropDownMenuStyleCustom: {
+                [self.leftCollectionView removeFromSuperview];
+                [self.rightCollectionView removeFromSuperview];
+                [self.leftTableView removeFromSuperview];
+                [self.rightTableView removeFromSuperview];
+                [self.customScrollView removeFromSuperview];
+                if (_currentSelectColumn < _customViews.count) {
+                    UIView *view = _customViews[_currentSelectColumn];
+                    if (view != nil) {
+                        CGFloat viewHeight = view.frame.size.height > 0 ? view.frame.size.height : _cellHeight;
+                        viewHeight = viewHeight > _tableViewHeight ? _tableViewHeight : viewHeight;
+                        view.frame = CGRectMake(0, 0, self.bounds.size.width, viewHeight);
+                        self.customScrollView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width, 0);
+                        [self.customScrollView addSubview:view];
+                        [self.superview addSubview:self.customScrollView];
+                        [UIView animateWithDuration:_kAnimationDuration animations:^{
+                            self.customScrollView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width, viewHeight);
+                        }];
+                    } else {
+                        self.leftTableView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width, 0);
+                        [self.superview addSubview:self.leftTableView];
+                        [UIView animateWithDuration:_kAnimationDuration animations:^{
+                            self.leftTableView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width, heightForTableView);
+                        }];
+                    }
+                } else {
+                    self.leftTableView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width, 0);
+                    [self.superview addSubview:self.leftTableView];
+                    [UIView animateWithDuration:_kAnimationDuration animations:^{
+                        self.leftTableView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width, heightForTableView);
+                    }];
+                }
+                break;
+            }
+            default:
+                break;
+        }
+    }
+}
+
+- (void)hiddenListViewWithHaveItems:(BOOL)haveItems {
+    TFDropDownMenuStyle style = TFDropDownMenuStyleTableView;
+    if (_currentSelectColumn < _menuStyleArray.count) {
+        style = [NSString stringWithFormat:@"%@", _menuStyleArray[_currentSelectColumn]].integerValue;
+    }
+    if (haveItems) {
+        
+        switch (style) {
+            case TFDropDownMenuStyleTableView: {
+                [UIView animateWithDuration:_kAnimationDuration animations:^{
+                    self.leftTableView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width * self.ratioLeftToScreen, 0);
+                    self.rightTableView.frame = CGRectMake(self.frame.origin.x + self.bounds.size.width * self.ratioLeftToScreen, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width * (1 - self.ratioLeftToScreen), 0);
+                } completion:^(BOOL finished) {
+                    [self.leftTableView removeFromSuperview];
+                    [self.rightTableView removeFromSuperview];
+                }];
+                break;
+            }
+            case TFDropDownMenuStyleCollectionView: {
+                [UIView animateWithDuration:_kAnimationDuration animations:^{
+                    self.leftCollectionView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width, 0);
+                } completion:^(BOOL finished) {
+                    [self.leftCollectionView removeFromSuperview];
+                }];
+                break;
+            }
+            case TFDropDownMenuStyleCustom: {
+                [self.leftCollectionView removeFromSuperview];
+                [self.rightCollectionView removeFromSuperview];
+                [self.leftTableView removeFromSuperview];
+                [self.rightTableView removeFromSuperview];
+                [self.customScrollView removeFromSuperview];
+                if (_currentSelectColumn < _customViews.count) {
+                    UIView *view = _customViews[_currentSelectColumn];
+                    if (view != nil) {
+                        [UIView animateWithDuration:_kAnimationDuration animations:^{
+                            self.customScrollView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width, 0);
+                        } completion:^(BOOL finished) {
+                            [self.customScrollView removeFromSuperview];
+                            for (UIView *subView in [self.customScrollView subviews]) {
+                                [subView removeFromSuperview];
+                            }
+                        }];
+                    } else {
+                        [UIView animateWithDuration:_kAnimationDuration animations:^{
+                            self.leftTableView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width * self.ratioLeftToScreen, 0);
+                            self.rightTableView.frame = CGRectMake(self.frame.origin.x + self.bounds.size.width * self.ratioLeftToScreen, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width * (1 - self.ratioLeftToScreen), 0);
+                        } completion:^(BOOL finished) {
+                            [self.leftTableView removeFromSuperview];
+                            [self.rightTableView removeFromSuperview];
+                        }];
+                    }
+                } else {
+                    [UIView animateWithDuration:_kAnimationDuration animations:^{
+                        self.leftTableView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width * self.ratioLeftToScreen, 0);
+                        self.rightTableView.frame = CGRectMake(self.frame.origin.x + self.bounds.size.width * self.ratioLeftToScreen, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width * (1 - self.ratioLeftToScreen), 0);
+                    } completion:^(BOOL finished) {
+                        [self.leftTableView removeFromSuperview];
+                        [self.rightTableView removeFromSuperview];
+                    }];
+                }
+                break;
+            }
+            default:
+                break;
+        }
+        
+        
+    } else {
+        switch (style) {
+            case TFDropDownMenuStyleTableView: {
+                [UIView animateWithDuration:_kAnimationDuration animations:^{
+                    self.leftTableView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width * self.ratioLeftToScreen, 0);
+                } completion:^(BOOL finished) {
+                    [self.leftTableView removeFromSuperview];
+                }];
+                break;
+            }
+            case TFDropDownMenuStyleCollectionView: {
+                [UIView animateWithDuration:_kAnimationDuration animations:^{
+                    self.leftCollectionView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width, 0);
+                } completion:^(BOOL finished) {
+                    [self.leftCollectionView removeFromSuperview];
+                }];
+                break;
+            }
+            case TFDropDownMenuStyleCustom: {
+                if (_currentSelectColumn < _customViews.count) {
+                    UIView *view = _customViews[_currentSelectColumn];
+                    if (view != nil) {
+                        [UIView animateWithDuration:_kAnimationDuration animations:^{
+                            self.customScrollView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width, 0);
+                        } completion:^(BOOL finished) {
+                            [self.customScrollView removeFromSuperview];
+                            for (UIView *subView in [self.customScrollView subviews]) {
+                                [subView removeFromSuperview];
+                            }
+                        }];
+                    } else {
+                        [UIView animateWithDuration:_kAnimationDuration animations:^{
+                            self.leftTableView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width, 0);
+                        } completion:^(BOOL finished) {
+                            [self.leftTableView removeFromSuperview];
+                        }];
+                    }
+                } else {
+                    [UIView animateWithDuration:_kAnimationDuration animations:^{
+                        self.leftTableView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height, self.bounds.size.width, 0);
+                    } completion:^(BOOL finished) {
+                        [self.leftTableView removeFromSuperview];
+                    }];
+                }
+                break;
+            }
+            default:
+                break;
+        }
     }
 }
 
