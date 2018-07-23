@@ -75,6 +75,4 @@
 /**动画时间, 默认0.25*/
 @property (assign, nonatomic) CGFloat kAnimationDuration;
 
-
-
 @end

@@ -353,7 +353,7 @@
 - (NSString *)titleForColumn:(NSInteger)column section:(NSInteger)section row:(NSInteger)row {
     if (column < _secondArray.count) {
         NSArray *aArray = [NSArray arrayWithArray:_secondArray[column]];
-        if (row < aArray.count) { //有二级目录
+        if (section < aArray.count) { //有二级目录
             NSArray *strArray = [NSArray arrayWithArray:aArray[section]];
             if (row < strArray.count) {
                 return [NSString stringWithFormat:@"%@", strArray[row]];
