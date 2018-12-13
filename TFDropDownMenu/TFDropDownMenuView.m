@@ -71,7 +71,9 @@
     
     return self;
 }
-
+- (void)disappearMenu{
+ [self backTapped:nil];
+}
 - (void)initAttributes {
     self.menuBackgroundColor = [UIColor whiteColor];
     self.itemTextSelectColor = [UIColor colorWithRed:246.0/255.0 green:79.0/255.0 blue:0.0/255.0 alpha:1.0];
