@@ -23,6 +23,7 @@
  */
 - (instancetype)initWithFrame:(CGRect)frame firstArray:(NSMutableArray *)firstArray secondArray:(NSMutableArray *)secondArray;
 
+- (void)disappearMenu;
 /**代理*/
 @property (nonatomic, weak) id<TFDropDownMenuViewDelegate> delegate;
 
