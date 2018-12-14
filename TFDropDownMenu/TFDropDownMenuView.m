@@ -784,6 +784,7 @@
             self.backgroundView.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
         } completion:^(BOOL finished) {
             [self.backgroundView removeFromSuperview];
+            [self.delegate disappearMenu:self];
         }];
     }
     if (complete) {
