@@ -654,38 +654,42 @@
     if (_delegate) {
         CGPoint tapPoint = [sender locationInView:self];
         NSInteger tapIndex = tapPoint.x / (self.frame.size.width / _numberOfColumn);
-        for (NSInteger i = 0; i < self.numberOfColumn; i++) {
-            if (i != tapIndex) {
-                [self animateForIndicator:_currentIndicatorLayers[i] show:NO complete:^{
-                    [self animateForTitleLayer:self.currentTitleLayers[i] indicator:nil show:NO complete:^{
-                    }];
+        [self selectNumber:tapIndex];
+    }
+    
+}
+/** 点击指定位置*/
+- (void)selectNumber:(NSInteger)tapIndex{
+    for (NSInteger i = 0; i < self.numberOfColumn; i++) {
+        if (i != tapIndex) {
+            [self animateForIndicator:_currentIndicatorLayers[i] show:NO complete:^{
+                [self animateForTitleLayer:self.currentTitleLayers[i] indicator:nil show:NO complete:^{
                 }];
-            }
-        }
-        // 收回或弹出当前的menu
-        if (_currentSelectColumn == tapIndex && _isShow) {// 收回menu
-            [self animateForIndicator:_currentIndicatorLayers[tapIndex] titlelayer:_currentTitleLayers[tapIndex] show:NO complete:^{
-                self.currentSelectColumn = tapIndex;
-                self.isShow = false;
-            }];
-            _currentSelectSections[_currentSelectColumn] = [NSNumber numberWithInteger:_lastSelectSection];
-        } else {// 弹出menu
-            if ([self.delegate respondsToSelector:@selector(menuView:tfColumn:)]) {
-                [self.delegate menuView:self tfColumn:tapIndex];
-            }
-            _currentSelectColumn = tapIndex;
-            _lastSelectSection = [NSString stringWithFormat:@"%@", _currentSelectSections[_currentSelectColumn]].integerValue;
-            // 载入数据
-            [_leftTableView reloadData];
-            if ([self numberOfRowsInColumn:_currentSelectColumn section:_lastSelectSection]) {
-                [_rightTableView reloadData];
-            }
-            [self animateForIndicator:_currentIndicatorLayers[tapIndex] titlelayer:_currentTitleLayers[tapIndex] show:YES complete:^{
-                self.isShow = YES;
             }];
         }
     }
-    
+    // 收回或弹出当前的menu
+    if (_currentSelectColumn == tapIndex && _isShow) {// 收回menu
+        [self animateForIndicator:_currentIndicatorLayers[tapIndex] titlelayer:_currentTitleLayers[tapIndex] show:NO complete:^{
+            self.currentSelectColumn = tapIndex;
+            self.isShow = false;
+        }];
+        _currentSelectSections[_currentSelectColumn] = [NSNumber numberWithInteger:_lastSelectSection];
+    } else {// 弹出menu
+        if ([self.delegate respondsToSelector:@selector(menuView:tfColumn:)]) {
+            [self.delegate menuView:self tfColumn:tapIndex];
+        }
+        _currentSelectColumn = tapIndex;
+        _lastSelectSection = [NSString stringWithFormat:@"%@", _currentSelectSections[_currentSelectColumn]].integerValue;
+        // 载入数据
+        [_leftTableView reloadData];
+        if ([self numberOfRowsInColumn:_currentSelectColumn section:_lastSelectSection]) {
+            [_rightTableView reloadData];
+        }
+        [self animateForIndicator:_currentIndicatorLayers[tapIndex] titlelayer:_currentTitleLayers[tapIndex] show:YES complete:^{
+            self.isShow = YES;
+        }];
+    }
 }
 
 /**背景点击*/
