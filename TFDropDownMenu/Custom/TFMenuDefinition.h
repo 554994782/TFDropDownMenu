@@ -22,6 +22,7 @@ typedef NS_ENUM(NSUInteger, TFDropDownMenuStyle) {
 //代理点击回调
 @class TFDropDownMenuView;
 @protocol TFDropDownMenuViewDelegate <NSObject>
+- (void)disappearMenu:(TFDropDownMenuView *)menu;//视图消失
 - (void)menuView:(TFDropDownMenuView *)menu tfColumn:(NSInteger)column;//菜单被点击
 - (void)menuView:(TFDropDownMenuView *)menu selectIndex:(TFIndexPatch *)index;//下拉菜单被点击
 @end
