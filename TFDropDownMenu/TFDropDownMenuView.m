@@ -686,6 +686,16 @@
     
 }
 
+/**自定义页面点击如需消失*/
+- (void)customViewTapDismiss {
+    [UIView animateWithDuration:_kAnimationDuration animations:^{
+        self.backgroundView.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
+    } completion:^(BOOL finished) {
+        [self.backgroundView removeFromSuperview];
+    }];
+}
+
+
 /**背景点击*/
 - (void)backTapped:(UITapGestureRecognizer *)sender {
     [self animateForIndicator:_currentIndicatorLayers[_currentSelectColumn] titlelayer:_currentTitleLayers[_currentSelectColumn] show:NO complete:^{

@@ -75,4 +75,7 @@
 /**动画时间, 默认0.25*/
 @property (assign, nonatomic) CGFloat kAnimationDuration;
 
+/**菜单收回*/
+- (void)customViewTapDismiss;
+
 @end
