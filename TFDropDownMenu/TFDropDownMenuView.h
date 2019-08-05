@@ -23,6 +23,9 @@
  */
 - (instancetype)initWithFrame:(CGRect)frame firstArray:(NSMutableArray *)firstArray secondArray:(NSMutableArray *)secondArray;
 
+- (void)disappearMenu;
+/** 指定点击*/
+- (void)selectNumber:(NSInteger)tapIndex;
 /**代理*/
 @property (nonatomic, weak) id<TFDropDownMenuViewDelegate> delegate;
 
